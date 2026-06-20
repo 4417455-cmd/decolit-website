@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Деколит — сквозные визуальные эффекты «Свет по фактуре».
+   Фиксированные слои поверх и под контентом: спотлайт за курсором,
+   плёночное зерно, фон-морф по скроллу, прогресс-скролла, вижнетка.
+   Всё на transform/opacity. Управление — js/effects.js. Подключать ПОСЛЕ style.css.
+   ========================================================================== */
+
+:root{
+  --fx-spot:rgba(236,202,148,.16);   /* тёплый луч (бронза/песок) */
+  --bronze-grad:linear-gradient(120deg,#7E5234 0%,#C9AE83 38%,#E7CFA0 52%,#9C6B45 78%,#7E5234 100%);
+}
+
+/* общий контейнер не нужен — слои живут прямо в body, поверх всего */
+.fx{position:fixed;pointer-events:none;contain:strict}
+
+/* ---------- 2.3 непрерывный фон-морф (за всем контентом) ---------- */
+/* z-index:-3 — глубже hero-bg(-2) и секционных tex-фонов(-1), чтобы тёмные «главы» не перекрывались */
+.fx-bg{position:fixed;inset:0;z-index:-3;overflow:hidden;pointer-events:none}
+.fx-bg__grad{
+  position:absolute;left:-5%;right:-5%;top:0;width:110%;height:230vh;
+  will-change:transform;
+  background:linear-gradient(180deg,
+    #F4F0E9 0%,
+    #EFE7D8 22%,
+    #E7DCC7 42%,
+    #D8CBB4 60%,
+    #E4D8C3 78%,
+    #F1ECE3 100%);
+}
+/* секции со своим светлым фоном делаем полупрозрачными — фон-морф просвечивает */
+.section-alt{background:rgba(234,228,217,.6)}
+.ticker{background:rgba(242,238,231,.72)}
+
+/* ---------- 2.5 вижнетка страницы ---------- */
+.fx-vignette{
+  position:fixed;inset:0;z-index:3;pointer-events:none;
+  background:radial-gradient(125% 125% at 50% 42%,transparent 58%,rgba(24,20,16,.10) 86%,rgba(18,15,11,.20) 100%);
+  mix-blend-mode:multiply;
+}
+
+/* ---------- 2.1 ambient spotlight (луч за курсором) ---------- */
+.fx-spot{
+  position:fixed;left:0;top:0;z-index:4;pointer-events:none;
+  width:62vmax;height:62vmax;border-radius:50%;
+  margin:0;
+  background:radial-gradient(circle at center,var(--fx-spot) 0%,rgba(236,202,148,.06) 34%,transparent 66%);
+  transform:translate3d(50vw,42vh,0) translate(-50%,-50%);
+  will-change:transform;
+  mix-blend-mode:soft-light;
+  opacity:.9;
+}
+
+/* ---------- 2.2 сквозная плёночная зернистость ---------- */
+.fx-grain{
+  position:fixed;inset:-50%;z-index:5;pointer-events:none;
+  width:200%;height:200%;
+  background-image:url("../assets/img/grain.svg");
+  background-size:200px 200px;
+  opacity:.05;
+  mix-blend-mode:soft-light;
+  will-change:transform;
+  animation:fx-grain 1.2s steps(4) infinite;
+}
+@keyframes fx-grain{
+  0%{transform:translate3d(0,0,0)}
+  25%{transform:translate3d(-4%,3%,0)}
+  50%{transform:translate3d(3%,-4%,0)}
+  75%{transform:translate3d(-3%,-2%,0)}
+  100%{transform:translate3d(2%,4%,0)}
+}
+
+/* ---------- 2.4 прогресс-скролла (бронзовая линия сверху) ---------- */
+.fx-progress{
+  position:fixed;left:0;top:0;z-index:6;pointer-events:none;
+  width:100%;height:2px;
+  transform:scaleX(0);transform-origin:0 50%;
+  background:var(--bronze-grad);
+  background-size:200% 100%;
+  will-change:transform;
+}
+
+/* ---------- параллакс-фон (Фаза 4.2): фактуры за контентом ---------- */
+/* оверсайз, чтобы сдвиг по скроллу не оголял края */
+.fx-parallax{top:-12% !important;height:124% !important;will-change:transform}
+
+/* ---------- кастомный курсор (Фаза 4.4) ---------- */
+.fx-cursor{
+  position:fixed;left:0;top:0;z-index:9999;pointer-events:none;
+  width:26px;height:26px;border-radius:50%;
+  margin:-13px 0 0 -13px;
+  background:radial-gradient(circle at center,rgba(236,202,148,.38),rgba(201,174,131,.14) 58%,rgba(156,107,69,.06) 72%,transparent 78%);
+  border:1px solid rgba(156,107,69,.68);
+  box-shadow:
+    0 0 0 1px rgba(25,22,19,.16),
+    0 8px 22px rgba(25,22,19,.12),
+    inset 0 0 12px rgba(250,247,241,.34);
+  transform:translate3d(50vw,50vh,0);
+  transition:width .3s cubic-bezier(.2,.6,.2,1),height .3s cubic-bezier(.2,.6,.2,1),background .3s,border-color .3s,box-shadow .3s;
+  display:none;
+}
+.fx-cursor.on{display:block}
+.fx-cursor::after{
+  content:attr(data-label);
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--paper);opacity:0;transition:opacity .3s;white-space:nowrap;mix-blend-mode:normal;
+}
+.fx-cursor.label{
+  width:88px;height:88px;background:rgba(20,17,13,.44);border-color:rgba(201,174,131,.72);
+  box-shadow:
+    0 0 0 1px rgba(250,247,241,.12),
+    0 18px 45px rgba(25,22,19,.28),
+    inset 0 0 20px rgba(201,174,131,.16);
+  backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);
+}
+.fx-cursor.label::after{opacity:1}
+/* прячем системный курсор только когда наш активен (десктоп) */
+body.fx-cursor-on,body.fx-cursor-on a,body.fx-cursor-on button,body.fx-cursor-on .work,body.fx-cursor-on input{cursor:none}
+
+/* ---------- магнитные кнопки (Фаза 4.4): плавный возврат ---------- */
+.btn.fx-magnetic{transition:transform .4s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s}
+
+/* ---------- reveal «дороже» (Фаза 4.3) ---------- */
+/* апгрейд базового .reveal: проявление с лёгкой маской снизу вверх */
+.reveal.fx-clip{clip-path:inset(0 0 6% 0);transition:opacity 1s ease,transform 1s cubic-bezier(.2,.6,.2,1),clip-path 1.1s cubic-bezier(.2,.6,.2,1)}
+.reveal.fx-clip.in{clip-path:inset(0 0 0 0)}
+
+/* ==========================================================================
+   Reduced-motion: гасим всё движение, слои оставляем статичными и мягкими.
+   Контент и reveal обязаны остаться видимыми.
+   ========================================================================== */
+@media(prefers-reduced-motion:reduce){
+  .fx-grain{animation:none}
+  .fx-bg__grad,.fx-spot,.fx-cursor,.fx-progress{will-change:auto}
+  .fx-cursor{display:none !important}
+  .reveal.fx-clip{clip-path:none}
+}
+
+/* на узких вьюпортах часть слоёв упрощаем (управляется и из JS) */
+@media(max-width:680px){
+  .fx-spot{opacity:.5}
+  .fx-grain{opacity:.04}
+  .fx-vignette{background:radial-gradient(130% 130% at 50% 45%,transparent 64%,rgba(18,15,11,.14) 100%)}
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "review-anna-kravtsova",
+    "status": "placeholder",
+    "rating": 5,
+    "author_name": "Анна Кравцова",
+    "author_role": "Клиент",
+    "object_label": "Квартира, ЖК «Символ»",
+    "related_coverings": ["microcement"],
+    "text": "Делали микроцемент в ванной и прихожей. Боялись, что будут трещины — за год ничего, поверхность как монолит. Мастера аккуратные, всё укрыли, мусор вывезли сами.",
+    "source": "Текущая заглушка на новом сайте; на decolitpro.ru при проверке 2026-06-16 отзыв не найден",
+    "permissions": {
+      "can_publish_name": false,
+      "can_publish_object": false,
+      "can_publish_photo": false,
+      "confirmed_by_client": false
+    },
+    "notes": "Нужно подтвердить, существует ли отзыв и можно ли использовать имя/ЖК."
+  },
+  {
+    "id": "review-igor-lebedev",
+    "status": "placeholder",
+    "rating": 5,
+    "author_name": "Игорь Лебедев",
+    "author_role": "Дизайнер интерьеров",
+    "object_label": null,
+    "related_coverings": ["microcement", "venecianka"],
+    "text": "Как дизайнер работаю с Деколит на третьем проекте. Попадают в референс по фактуре и цвету, выкрасы делают заранее. На сдаче объекта ни разу не подвели по срокам.",
+    "source": "Текущая заглушка на новом сайте; на decolitpro.ru при проверке 2026-06-16 отзыв не найден",
+    "permissions": {
+      "can_publish_name": false,
+      "can_publish_object": false,
+      "can_publish_photo": false,
+      "confirmed_by_client": false
+    },
+    "notes": "Нужно подтвердить реальность отзыва и согласие дизайнера."
+  },
+  {
+    "id": "review-marina-solovieva",
+    "status": "placeholder",
+    "rating": 5,
+    "author_name": "Марина Соловьёва",
+    "author_role": "Клиент",
+    "object_label": "Загородный дом, Новая Рига",
+    "related_coverings": ["venecianka"],
+    "text": "Венецианка в гостиной выглядит дороже, чем на фото из каталога. Приехали с образцами, показали вживую, помогли выбрать оттенок под мебель. Рекомендую.",
+    "source": "Текущая заглушка на новом сайте; на decolitpro.ru при проверке 2026-06-16 отзыв не найден",
+    "permissions": {
+      "can_publish_name": false,
+      "can_publish_object": false,
+      "can_publish_photo": false,
+      "confirmed_by_client": false
+    },
+    "notes": "Нужно подтвердить, существует ли отзыв и можно ли использовать имя/локацию."
+  },
+  {
+    "id": "review-dmitry-orlov",
+    "status": "placeholder",
+    "rating": 5,
+    "author_name": "Дмитрий Орлов",
+    "author_role": "Клиент",
+    "object_label": "Лофт на Дербеневской",
+    "related_coverings": ["microcement"],
+    "text": "Положили микроцемент на пол в студии прямо поверх старой стяжки. Получился ровный бесшовный пол тёплого оттенка, выглядит дорого. Уложились в три дня.",
+    "source": "Текущая заглушка на странице микроцемента; на decolitpro.ru при проверке 2026-06-16 отзыв не найден",
+    "permissions": {
+      "can_publish_name": false,
+      "can_publish_object": false,
+      "can_publish_photo": false,
+      "confirmed_by_client": false
+    },
+    "notes": "Нужно подтвердить реальность отзыва."
+  }
+]

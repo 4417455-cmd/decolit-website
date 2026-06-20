@@ -1,0 +1,32 @@
+{
+  "silk-plaster": {
+    "material": "Шелк / Marmoris",
+    "source_page": "https://decolitpro.ru/matovi",
+    "image": "https://static.tildacdn.com/tild6464-3663-4766-b337-306665613030/FullSizeRender_75.jpg"
+  },
+  "ancoral": {
+    "material": "Замша / велюр / Ancoral",
+    "source_page": "https://decolitpro.ru/ancoral",
+    "image": "https://static.tildacdn.com/tild3739-6430-4436-b732-653133356535/FullSizeRender_66.jpg"
+  },
+  "fakturnaya": {
+    "material": "Фактурная штукатурка",
+    "source_page": "https://decolitpro.ru/faktura_",
+    "image": "https://static.tildacdn.com/tild6333-6364-4138-b963-393138323036/1.jpg"
+  },
+  "nubuk": {
+    "material": "Нубук",
+    "source_page": "https://decolitpro.ru/nubuk",
+    "image": "https://static.tildacdn.com/tild3137-3530-4164-b631-386338653731/IMG_6651.jpg"
+  },
+  "karta-mira": {
+    "material": "Карта мира",
+    "source_page": "https://decolitpro.ru/karta-mira",
+    "image": "https://static.tildacdn.com/tild3731-3733-4265-b166-326134643461/FullSizeRender_42.jpg"
+  },
+  "nuvole-quartz": {
+    "material": "Nuvole Quartz",
+    "source_page": "https://decolitpro.ru/nuvole-metalkor",
+    "image": "https://static.tildacdn.com/tild3439-3763-4264-b565-323066386639/FullSizeRender_6.jpg"
+  }
+}

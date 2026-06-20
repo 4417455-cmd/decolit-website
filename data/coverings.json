@@ -1,0 +1,256 @@
+[
+  {
+    "id": "microcement",
+    "name": "Микроцемент",
+    "source_url": "https://decolitpro.ru/mikrocement/",
+    "local_url": "pokrytiya/mikrocement.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "mineral_seamless",
+    "short_description": "Минеральная декоративная штукатурка для стен, полов, кухонных рабочих поверхностей, ванных и душевых.",
+    "tags": ["Ванная", "Пол", "Бесшовно", "Влагостойко"],
+    "variants": [
+      {
+        "name": "Микроцемент МС 1-12",
+        "material_from_rub_m2": 6200,
+        "work_from_rub_m2": 3500,
+        "material_and_work_from_rub_m2": 9700
+      }
+    ],
+    "calculator_from_rub_m2": 9700,
+    "price_note": "На decolitpro.ru для вариантов МС 1-12 указана единая цена: материал 6200 ₽/м², нанесение 3500 ₽/м².",
+    "site_notes": "На странице также описаны полиуретановая защита MATT PROTECTOR 2K, устойчивость к влаге и УФ, применение в санузлах и душевых."
+  },
+  {
+    "id": "concrete",
+    "name": "Декоративная штукатурка под бетон",
+    "source_url": "https://decolitpro.ru/concrete",
+    "local_url": "pokrytiya/beton.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "concrete_effect",
+    "short_description": "Современное декоративное покрытие с эффектом бетона для жилых и коммерческих интерьеров.",
+    "tags": ["Бетон", "Лофт", "Матовое", "Минимализм"],
+    "variants": [
+      {
+        "name": "Декоцемент D 1-6",
+        "material_from_rub_m2": 1850,
+        "work_from_rub_m2": 1800,
+        "material_and_work_from_rub_m2": 3650
+      }
+    ],
+    "calculator_from_rub_m2": 3650,
+    "price_note": "На decolitpro.ru для Декоцемент D 1-6 указана единая цена: материал 1850 ₽/м², нанесение 1800 ₽/м²."
+  },
+  {
+    "id": "ancoral",
+    "name": "Ancoral / эффект замши",
+    "source_url": "https://decolitpro.ru/ancoral",
+    "local_url": "pokrytiya/zamsha.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "suede_effect",
+    "short_description": "Матовая декоративная штукатурка с эффектом замши и мягкой кожи.",
+    "tags": ["Замша", "Велюр", "Матовое", "Уют"],
+    "variants": [
+      {
+        "name": "Ancoral 1-12",
+        "material_from_rub_m2": 1150,
+        "work_from_rub_m2": 1450,
+        "material_and_work_from_rub_m2": 2600
+      }
+    ],
+    "calculator_from_rub_m2": 2600,
+    "price_note": "На decolitpro.ru для Ancoral 1-12 указана единая цена: материал 1150 ₽/м², нанесение 1450 ₽/м².",
+    "site_notes": "В старом меню эта страница называется эффектом замши; в описании ниже страницы Ancoral также подается как рельефное минеральное покрытие."
+  },
+  {
+    "id": "marmoris-ar",
+    "name": "Матовый шелк Marmoris AR",
+    "source_url": "https://decolitpro.ru/matovi",
+    "local_url": "pokrytiya/shelk.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "matte_silk",
+    "short_description": "Матовое тонкослойное декоративное покрытие с большим диапазоном фактур: дюны, старые стены, бетон, ткань, дерево и другие эффекты.",
+    "tags": ["Матовый шелк", "Ткань", "Дюны", "Фоновые стены"],
+    "variants": [
+      {
+        "name": "Marmoris 1-15",
+        "material_from_rub_m2": 1250,
+        "work_from_rub_m2": 1450,
+        "material_and_work_from_rub_m2": 2700
+      }
+    ],
+    "calculator_from_rub_m2": 2700,
+    "price_note": "На decolitpro.ru для Marmoris 1-15 указана единая цена: материал 1250 ₽/м², нанесение 1450 ₽/м²."
+  },
+  {
+    "id": "nuvole",
+    "name": "Nuvole / эффект шелка",
+    "source_url": "https://decolitpro.ru/silk",
+    "local_url": "pokrytiya/shelk.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "silk_effect",
+    "short_description": "Декоративная штукатурка с эффектом шелка и бархатистой ткани, мягким переливом и широкой палитрой.",
+    "tags": ["Шелк", "Перламутр", "Бархатистость", "Интерьерные стены"],
+    "variants": [
+      {
+        "name": "Nuvole 1, 3, 4, 7, 8, 10, 11",
+        "material_from_rub_m2": 1250,
+        "work_from_rub_m2": 1400,
+        "material_and_work_from_rub_m2": 2650
+      },
+      {
+        "name": "Nuvole 2, 5, 6, 9, 12",
+        "material_from_rub_m2": 1250,
+        "work_from_rub_m2": 1600,
+        "material_and_work_from_rub_m2": 2850
+      }
+    ],
+    "calculator_from_rub_m2": 2650,
+    "price_note": "На decolitpro.ru материал для всех вариантов Nuvole указан 1250 ₽/м²; нанесение отличается: 1400 или 1600 ₽/м².",
+    "site_notes": "На странице указаны свойства: влажная уборка, реставрация, водный разбавитель, негорючесть, экологичность, паропроницаемость, расход 0,15 л/м²."
+  },
+  {
+    "id": "world-map",
+    "name": "Карта мира",
+    "source_url": "https://decolitpro.ru/karta-mira",
+    "local_url": "pokrytiya/fakturnaya.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "textured_relief",
+    "short_description": "Фактурная декоративная штукатурка с рельефным рисунком, напоминающим очертания материков и природные структуры.",
+    "tags": ["Карта мира", "Рельеф", "Акцент", "Фактура"],
+    "variants": [
+      {
+        "name": "Marmoris L 13-27",
+        "material_from_rub_m2": 1890,
+        "work_from_rub_m2": 1700,
+        "material_and_work_from_rub_m2": 3590
+      }
+    ],
+    "calculator_from_rub_m2": 3590,
+    "price_note": "На отдельной странице Карта мира для Marmoris L 13-27 указана единая цена: материал 1890 ₽/м², нанесение 1700 ₽/м²."
+  },
+  {
+    "id": "fakturnaya",
+    "name": "Фактурная штукатурка",
+    "source_url": "https://decolitpro.ru/faktura_",
+    "local_url": "pokrytiya/fakturnaya.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "textured_relief",
+    "short_description": "Декоративное покрытие с выразительным ручным рельефом для жилых и коммерческих интерьеров.",
+    "tags": ["Рельеф", "Акцент", "Авторское", "Коммерческие интерьеры"],
+    "variants": [
+      {
+        "name": "Marmoris L 1, 3-5, 7-15, 17-25",
+        "material_from_rub_m2": 1990,
+        "work_from_rub_m2": 1800,
+        "material_and_work_from_rub_m2": 3790
+      },
+      {
+        "name": "Marmoris L 2",
+        "material_from_rub_m2": 2990,
+        "work_from_rub_m2": 5500,
+        "material_and_work_from_rub_m2": 8490
+      },
+      {
+        "name": "Marmoris L 6",
+        "material_from_rub_m2": 1990,
+        "work_from_rub_m2": 2500,
+        "material_and_work_from_rub_m2": 4490
+      },
+      {
+        "name": "Marmoris L 16",
+        "material_from_rub_m2": 2590,
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 4790
+      },
+      {
+        "name": "Marmoris L 26",
+        "material_from_rub_m2": 2290,
+        "work_from_rub_m2": 1800,
+        "material_and_work_from_rub_m2": 4090
+      },
+      {
+        "name": "Marmoris L 27",
+        "material_from_rub_m2": 2590,
+        "work_from_rub_m2": 2500,
+        "material_and_work_from_rub_m2": 5090
+      }
+    ],
+    "calculator_from_rub_m2": 3790,
+    "price_note": "На decolitpro.ru у фактурной штукатурки разные цены по вариантам Marmoris L; для калькулятора берём минимальную подтвержденную цену."
+  },
+  {
+    "id": "venetian",
+    "name": "Венецианская штукатурка",
+    "source_url": "https://decolitpro.ru/venezianka",
+    "local_url": "pokrytiya/venecianka.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "venetian_plaster",
+    "short_description": "Гладкое многослойное покрытие с эффектом натурального мрамора, глубиной и мягким глянцем.",
+    "tags": ["Венецианка", "Мрамор", "Глянец", "Премиум"],
+    "variants": [
+      {
+        "name": "Marmorella 4, 6, 7, 13-15",
+        "material_from_rub_m2": 1990,
+        "work_from_rub_m2": 2000,
+        "material_and_work_from_rub_m2": 3990
+      },
+      {
+        "name": "Marmorella 3, 5, 8-12",
+        "material_from_rub_m2": 1990,
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 4190
+      },
+      {
+        "name": "Marmorella 1-2",
+        "material_from_rub_m2": 1990,
+        "work_from_rub_m2": 2700,
+        "material_and_work_from_rub_m2": 4690
+      }
+    ],
+    "calculator_from_rub_m2": 3990,
+    "price_note": "На decolitpro.ru материал для Marmorella 1-15 указан 1990 ₽/м²; нанесение зависит от варианта: 2000, 2200 или 2700 ₽/м²."
+  },
+  {
+    "id": "nuvole-quartz",
+    "name": "Nuvole Quartz",
+    "source_url": "https://decolitpro.ru/nuvole-metalkor",
+    "local_url": "pokrytiya/fakturnaya.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_decolitpro",
+    "category": "quartz_silk_effect",
+    "short_description": "Декоративная штукатурка с кварцевым наполнителем, мягкой глубиной и деликатным рельефом.",
+    "tags": ["Кварцевый шелк", "Nuvole", "Рельеф", "Износостойкость"],
+    "variants": [
+      {
+        "name": "Nuvole Quartz 1-15",
+        "material_from_rub_m2": 1350,
+        "work_from_rub_m2": 1600,
+        "material_and_work_from_rub_m2": 2950
+      }
+    ],
+    "calculator_from_rub_m2": 2950,
+    "price_note": "На decolitpro.ru для Nuvole Quartz 1-15 указана единая цена: материал 1350 ₽/м², нанесение 1600 ₽/м²."
+  },
+  {
+    "id": "nubuk",
+    "name": "Нубук",
+    "source_url": "https://decolitpro.ru/",
+    "local_url": "pokrytiya/zamsha.html",
+    "status": "needs_confirmation",
+    "source_status": "listed_on_decolitpro_menu_only",
+    "category": "suede_effect",
+    "short_description": "Покрытие указано в меню материалов decolitpro.ru, но отдельную страницу с ценой при текущей проверке открыть не удалось.",
+    "tags": ["Нубук", "Замша", "Велюр"],
+    "variants": [],
+    "calculator_from_rub_m2": null,
+    "price_note": "Нужно отдельно подтвердить URL и прайс по Нубуку."
+  }
+]

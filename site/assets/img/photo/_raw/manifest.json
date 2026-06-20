@@ -1,0 +1,128 @@
+{
+  "microcement": {
+    "title": "polished concrete",
+    "creator": "Mr Thinktank",
+    "license": "by",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "page": "https://www.flickr.com/photos/34621580@N00/4048611844",
+    "source": "flickr",
+    "size": "1024x768"
+  },
+  "venetian": {
+    "title": "venetian plaster detail",
+    "creator": "andres musta",
+    "license": "by",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "page": "https://www.flickr.com/photos/32399948@N06/4358018085",
+    "source": "flickr",
+    "size": "1024x683"
+  },
+  "concrete": {
+    "title": "concrete wall texture",
+    "creator": "coun2rparts",
+    "license": "by",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "page": "https://www.flickr.com/photos/37668587@N05/3508864133",
+    "source": "flickr",
+    "size": "1024x769"
+  },
+  "silk": {
+    "title": "Pink Woven Cotton Silk Fabric Texture Free Creative Commons (6962346249)",
+    "creator": "Pink Sherbet Photography from Utah, USA",
+    "license": "by",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "page": "https://commons.wikimedia.org/w/index.php?curid=40532819",
+    "source": "wikimedia",
+    "size": "5616x3744"
+  },
+  "suede": {
+    "title": "IMG_9186",
+    "creator": "jcfrog",
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "page": "https://www.flickr.com/photos/21717345@N03/7636473196",
+    "source": "flickr",
+    "size": "1024x683"
+  },
+  "travertine": {
+    "title": "free texture, travertine stone, modern architecture, seier+seier",
+    "creator": "seier+seier",
+    "license": "by",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "page": "https://www.flickr.com/photos/94852245@N00/4356821425",
+    "source": "flickr",
+    "size": "1024x784"
+  },
+  "hero": {
+    "title": "gottfried böhm, pilgrimage church, neviges 1963-1972",
+    "creator": "seier+seier",
+    "license": "by",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "page": "https://www.flickr.com/photos/94852245@N00/3213225587",
+    "source": "flickr",
+    "size": "1024x683"
+  },
+  "work-living": {
+    "title": "Modern living room interior | Design Loft",
+    "creator": "Foto Miki Digital",
+    "license": "pdm",
+    "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "page": "https://www.flickr.com/photos/96511847@N04/10798143964",
+    "source": "flickr",
+    "size": "1024x768"
+  },
+  "work-hall": {
+    "title": "Sultan Omar Ali Saifuddin Mosque. Brunei.",
+    "creator": "Bernard Spragg",
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "page": "https://www.flickr.com/photos/88123769@N02/31419420010",
+    "source": "flickr",
+    "size": "1024x703"
+  },
+  "work-loft": {
+    "title": "Urbane Residents / Maple / Two Bedroom / Monica",
+    "creator": "urbaneapts",
+    "license": "by-sa",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "page": "https://www.flickr.com/photos/34170343@N02/3185882065",
+    "source": "flickr",
+    "size": "1024x645"
+  },
+  "work-bedroom": {
+    "title": "Anantara Bangkok Sathorn - Kasara two-bedroom suite",
+    "creator": "SUPERADRIANME",
+    "license": "by",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "page": "https://www.flickr.com/photos/58336462@N06/17962820046",
+    "source": "flickr",
+    "size": "1024x683"
+  },
+  "work-lobby": {
+    "title": "New Arbat Avenue 32 2023-04 hotel lobby interior",
+    "creator": "Svetlov Artem",
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/",
+    "page": "https://commons.wikimedia.org/w/index.php?curid=130945079",
+    "source": "wikimedia",
+    "size": "4192x3104"
+  },
+  "work-restaurant": {
+    "title": "Free modern restaurant interior image",
+    "creator": null,
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "page": "https://www.rawpixel.com/image/5905263/photo-image-public-domain-table-room",
+    "source": "rawpixel",
+    "size": "4608x3072"
+  },
+  "work-bath": {
+    "title": "Modern bathroom interior",
+    "creator": null,
+    "license": "cc0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "page": "https://www.rawpixel.com/image/6042774/photo-image-public-domain-house-home",
+    "source": "rawpixel",
+    "size": "5444x4956"
+  }
+}

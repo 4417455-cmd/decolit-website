@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice">
+  <!-- Фактурная: крупный рельеф с горизонтальным «травертиновым» бандингом, сильный боковой свет -->
+  <defs>
+    <filter id="relief" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.007 0.035" numOctaves="5" seed="12" result="r"/>
+      <feDiffuseLighting in="r" lighting-color="#ffffff" surfaceScale="5.5" diffuseConstant="1.0">
+        <feDistantLight azimuth="210" elevation="42"/>
+      </feDiffuseLighting>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="0.48 0.68 0.86 0.93"/>
+        <feFuncG type="table" tableValues="0.43 0.62 0.80 0.88"/>
+        <feFuncB type="table" tableValues="0.36 0.53 0.70 0.79"/>
+      </feComponentTransfer>
+      <feComposite in2="SourceGraphic" operator="atop"/>
+    </filter>
+    <filter id="pits" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.16" numOctaves="2" seed="25" result="p"/>
+      <feColorMatrix in="p" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  2.0 0 0 0 -1.35" result="pa"/>
+      <feFlood flood-color="#4d4337" result="ink"/>
+      <feComposite in="ink" in2="pa" operator="in" result="pt"/>
+      <feGaussianBlur in="pt" stdDeviation="1.2"/>
+      <feComposite in2="SourceGraphic" operator="in"/>
+    </filter>
+    <linearGradient id="rake" x1="0" y1="0" x2="1" y2="0.85">
+      <stop offset="0" stop-color="#fff6e4" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#473d30" stop-opacity="0.22"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="#c4b49c" filter="url(#relief)"/>
+  <rect width="1600" height="1200" fill="#c4b49c" opacity="0.6" filter="url(#pits)"/>
+  <rect width="1600" height="1200" fill="url(#rake)"/>
+  <!-- FX: единое направление света (верх-лево → низ-право) + мягкая вижнетка, добавляют объём -->
+  <linearGradient id="fxLight" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff6e8" stop-opacity="0.13"/>
+    <stop offset="0.44" stop-color="#fff6e8" stop-opacity="0"/>
+    <stop offset="1" stop-color="#17110b" stop-opacity="0.16"/>
+  </linearGradient>
+  <radialGradient id="fxVin" cx="0.46" cy="0.4" r="0.82">
+    <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="0.68" stop-color="#000000" stop-opacity="0"/>
+    <stop offset="1" stop-color="#140f0a" stop-opacity="0.22"/>
+  </radialGradient>
+  <rect width="100%" height="100%" fill="url(#fxLight)"/>
+  <rect width="100%" height="100%" fill="url(#fxVin)"/>
+</svg>

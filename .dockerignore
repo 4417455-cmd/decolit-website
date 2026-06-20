@@ -1,0 +1,9 @@
+# В образ нужна только папка site/. Остальное — внутреннее, в контекст сборки не отдаём.
+analysis/
+plans/
+raw/
+tmp/
+ideas/
+CLAUDE.md
+README.md
+.git/

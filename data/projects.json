@@ -1,0 +1,32 @@
+[
+  {
+    "id": "project-template",
+    "status": "draft",
+    "title": "Название объекта",
+    "object_type": "квартира / дом / офис / ресторан / шоурум",
+    "location_public": "Можно указать район, ЖК или город",
+    "location_private": "Точный адрес не публикуем без необходимости",
+    "year": null,
+    "area_m2": null,
+    "coverings": [],
+    "rooms": [],
+    "designer": null,
+    "description": "Коротко: задача, покрытие, результат.",
+    "photos": [
+      {
+        "src": "assets/img/photo/example.jpg",
+        "alt": "Описание фото",
+        "can_publish": false,
+        "is_before": false,
+        "is_after": true
+      }
+    ],
+    "permissions": {
+      "can_publish_project": false,
+      "can_publish_location": false,
+      "can_publish_designer": false,
+      "can_use_in_ads": false
+    },
+    "notes": "Шаблон записи. Реальные проекты добавляем отдельными объектами ниже."
+  }
+]

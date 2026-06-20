@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Деколит — стили страницы услуги (поверх style.css).
+   Подключать вместе с css/style.css.
+   ========================================================================== */
+
+/* ---------- breadcrumbs ---------- */
+.crumbs{padding:120px 0 0;font-size:13px;letter-spacing:.03em;color:var(--taupe)}
+.crumbs a{color:var(--taupe);transition:color .2s}
+.crumbs a:hover{color:var(--accent)}
+.crumbs span{margin:0 8px;opacity:.5}
+.crumbs b{color:var(--graphite);font-weight:500}
+
+/* ---------- hero услуги (сплит) ---------- */
+.svc-hero{padding:48px 0 110px}
+.svc-hero .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.svc-hero h1{font-size:clamp(38px,5.6vw,72px);line-height:1.08;margin:22px 0 0}
+.svc-hero h1 em{font-style:normal;color:var(--accent)}
+.svc-hero .sub{font-size:clamp(17px,2vw,20px);color:var(--graphite);max-width:520px;margin:24px 0 30px;line-height:1.55}
+.svc-price{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.svc-price .v{font-family:var(--serif);font-size:clamp(30px,4vw,40px);color:var(--ink);line-height:1.05}
+.svc-price .u{font-size:14px;color:var(--taupe);letter-spacing:.04em;line-height:1.45}
+.svc-hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.svc-hero .facts{display:flex;gap:34px;flex-wrap:wrap;margin-top:42px;padding-top:30px;border-top:1px solid var(--line)}
+.svc-hero .facts .n{font-family:var(--serif);font-size:26px;color:var(--accent)}
+.svc-hero .facts .l{font-size:13px;color:var(--graphite);margin-top:6px;max-width:130px}
+.svc-hero .visual{position:relative;height:520px;border-radius:4px;overflow:hidden}
+.svc-hero .visual .surface{position:absolute;inset:0}
+.svc-hero .visual .badge{position:absolute;left:24px;bottom:24px;z-index:2;background:rgba(20,18,15,.55);backdrop-filter:blur(6px);color:#fff;padding:12px 18px;border-radius:2px;font-size:13px;letter-spacing:.04em}
+
+/* ---------- более плотный ритм service-страниц ---------- */
+.section{padding:104px 0}
+.section + .section{padding-top:52px}
+#faq.section{padding-bottom:54px}
+#faq.section + .section{padding-top:54px}
+
+/* ---------- "что это / где применяют" ---------- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.about-grid .lead-txt p{color:var(--graphite);font-size:17px;margin-bottom:18px;max-width:540px}
+.apply{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.apply .a-item{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:22px}
+.apply .a-item .ic{font-family:var(--serif);font-size:20px;color:var(--accent);margin-bottom:10px}
+.apply .a-item h4{font-family:var(--sans);font-size:15px;font-weight:700;margin-bottom:6px}
+.apply .a-item p{font-size:13.5px;color:var(--graphite);line-height:1.5}
+
+/* ---------- преимущества ---------- */
+.adv{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.adv .item{background:var(--bg);padding:34px 28px}
+.section-alt .adv .item{background:var(--bg-2)}
+.adv .num{font-family:var(--serif);font-size:14px;color:var(--accent);margin-bottom:18px}
+.adv h3{font-size:20px;margin-bottom:10px}
+.adv p{font-size:14.5px;color:var(--graphite);line-height:1.55}
+
+/* ---------- процесс нанесения (вертикальный) ---------- */
+.flow{max-width:820px;margin:0 auto;display:grid;gap:0}
+.flow .row{display:grid;grid-template-columns:90px 1fr;gap:30px;padding:32px 0;border-bottom:1px solid var(--line)}
+.flow .row:last-child{border-bottom:0}
+.flow .row .step-no{font-family:var(--serif);font-size:44px;color:var(--sand);line-height:1}
+.flow .row h3{font-size:23px;margin-bottom:8px}
+.flow .row p{color:var(--graphite);font-size:15.5px;max-width:560px}
+
+/* ---------- таблица цен ---------- */
+.price-wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:start}
+.ptable{width:100%;border-collapse:collapse;font-size:15px}
+.ptable th,.ptable td{text-align:left;padding:18px 16px;border-bottom:1px solid var(--line)}
+.ptable th{font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--taupe);font-weight:600}
+.ptable td:first-child{font-weight:600;color:var(--ink)}
+.ptable .num{font-family:var(--serif);color:var(--accent);white-space:nowrap}
+.ptable tr.total td{border-bottom:0;border-top:2px solid var(--ink);font-size:16px}
+.price-note{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:30px}
+.price-note h4{font-family:var(--sans);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.price-note ul{list-style:none;display:grid;gap:12px}
+.price-note li{display:flex;gap:10px;font-size:14.5px;color:var(--graphite)}
+.price-note li::before{content:"·";color:var(--accent);font-weight:700}
+
+/* ---------- перелинковка на другие покрытия ---------- */
+.cross{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cross a{position:relative;border-radius:3px;overflow:hidden;min-height:180px;display:flex;align-items:flex-end;padding:22px;color:#fff}
+.cross a .surface{position:absolute;inset:0;z-index:-1;transition:transform .6s cubic-bezier(.2,.6,.2,1)}
+.cross a::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 40%,rgba(20,18,15,.7))}
+.cross a:hover .surface{transform:scale(1.06)}
+.cross a .t{font-family:var(--serif);font-size:22px;position:relative;z-index:1}
+
+@media(max-width:1020px){
+  .svc-hero .grid{grid-template-columns:1fr;gap:40px}
+  .svc-hero .visual{height:380px;order:-1}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .adv{grid-template-columns:repeat(2,1fr)}
+  .price-wrap{grid-template-columns:1fr;gap:32px}
+  .cross{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .crumbs{padding-top:100px}
+  .svc-hero{padding:36px 0 70px}
+  .section{padding:72px 0}
+  .section + .section{padding-top:38px}
+  #faq.section{padding-bottom:40px}
+  #faq.section + .section{padding-top:42px}
+  .svc-hero .visual{height:300px}
+  .apply,.adv{grid-template-columns:1fr}
+  .svc-price .v{font-size:32px}
+  .flow .row{grid-template-columns:60px 1fr;gap:18px}
+  .flow .row .step-no{font-size:34px}
+  .ptable th,.ptable td{padding:14px 12px}
+  .ptable{font-size:14px}
+}
+.ptable-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* ==========================================================================
+   Фаза 5 — материальные детали страницы услуги (поверх style.css).
+   ========================================================================== */
+/* металлический отлив бронзы на ключевых цифрах */
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .svc-price .v,.svc-hero .facts .n,.flow .row .step-no{
+    background:var(--bronze-grad);background-size:140% 100%;
+    -webkit-background-clip:text;background-clip:text;
+    -webkit-text-fill-color:transparent;color:transparent;
+  }
+}
+/* глубина карточек и блоков */
+.apply .a-item{box-shadow:0 1px 1px rgba(25,22,19,.04),0 14px 30px -26px rgba(25,22,19,.28),inset 0 1px 0 rgba(255,255,255,.6)}
+.price-note{box-shadow:0 1px 1px rgba(25,22,19,.04),0 16px 34px -28px rgba(25,22,19,.28),inset 0 1px 0 rgba(255,255,255,.6)}
+.svc-hero .visual{box-shadow:0 40px 80px -44px rgba(25,22,19,.55)}
+.adv{box-shadow:0 20px 50px -38px rgba(25,22,19,.32)}
+/* засечка-бусина на разделителе шага процесса */
+.flow .row{position:relative}
+.flow .row::before{content:"◆";position:absolute;top:-7px;left:0;font-size:8px;line-height:1;color:var(--accent);opacity:.7}
+.flow .row:first-child::before{display:none}

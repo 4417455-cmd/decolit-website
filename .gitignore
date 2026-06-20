@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Временные файлы и идеи
+tmp/
+ideas/idea.md
+ideas/20*.md
+
+# промежуточные загрузки фото (кандидаты + сырьё), в прод не нужны
+site/assets/img/photo/_cand/
+site/assets/img/photo/_raw/*.img
