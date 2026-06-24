@@ -1,5 +1,0 @@
-build:
-  dockerfile: Dockerfile
-
-run:
-  containerPort: 80
