@@ -28,7 +28,6 @@
       card.className = `work ${layoutClass(i)}`;
       card.innerHTML = `
         <div class="surface photo grain" style="background-image:url('assets/img/works/work-${n}.${ext(i)}')"></div>
-        <div class="cap"><div class="m"><span>Декоративные покрытия</span></div></div>
       `;
       fragment.appendChild(card);
     }

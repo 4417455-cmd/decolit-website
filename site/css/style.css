@@ -253,12 +253,15 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .calc .right .btn{position:relative;align-self:flex-start}
 
 /* ---------- доверие / счётчики ---------- */
-.trust-section{padding:0}
+.trust-section{padding:132px 0 0}
 .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .trust > div{padding:64px 28px;text-align:center;border-right:1px solid var(--line)}
 .trust > div:last-child{border-right:0}
 .trust .n{font-family:var(--serif);font-size:clamp(31px,3.2vw,44px);line-height:1;color:#6F432A;font-variant-numeric:tabular-nums}
 .trust .l{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--graphite);margin-top:16px}
+.trust-points > div{padding:46px 34px;text-align:left}
+.trust-point h3{font-size:24px;color:var(--ink);margin-bottom:16px}
+.trust-point p{font-size:14.5px;line-height:1.65;color:var(--graphite);max-width:340px}
 .counter-item{opacity:0;transform:translateY(18px);transition:opacity .72s ease,transform .72s cubic-bezier(.2,.6,.2,1)}
 .counter-item.counter-in{opacity:1;transform:none}
 .counter-item .n{transition:text-shadow .6s ease,color .6s ease}
