@@ -444,6 +444,30 @@ footer{background:var(--ink);color:rgba(255,255,255,.68);padding:88px 0 0;positi
 input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 1px var(--sand),0 0 0 6px rgba(201,174,131,.25)}
 .result{transition:opacity .25s ease,transform .25s cubic-bezier(.2,.6,.2,1)}
 
+/* просмотр фактур: приближаем изображение, а не всю страницу */
+.surface[data-zoom-src]{cursor:zoom-in}
+.zoom-viewer{
+  position:fixed;inset:0;z-index:10000;display:none;background:rgba(12,10,8,.94);
+  color:#fff;overflow:hidden;touch-action:none;
+}
+.zoom-viewer.open{display:flex}
+.zoom-viewer__stage{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;touch-action:none;cursor:grab}
+.zoom-viewer__stage:active{cursor:grabbing}
+.zoom-viewer__img{
+  max-width:96vw;max-height:92svh;object-fit:contain;user-select:none;-webkit-user-drag:none;
+  transform:translate3d(0,0,0) scale(1);transform-origin:center;will-change:transform;
+}
+.zoom-viewer__close{
+  position:absolute;right:18px;top:18px;z-index:2;width:44px;height:44px;border:1px solid rgba(255,255,255,.34);
+  border-radius:50%;background:rgba(20,18,15,.58);color:#fff;font-size:30px;line-height:1;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;font-family:var(--sans);
+}
+.zoom-viewer__title{
+  position:absolute;left:18px;right:78px;bottom:18px;z-index:2;font-size:12px;letter-spacing:.12em;
+  text-transform:uppercase;color:rgba(255,255,255,.72);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.zoom-viewer-open{overflow:hidden}
+
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}

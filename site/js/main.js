@@ -226,3 +226,134 @@ if (leadForm) {
     }
   });
 }
+
+// --- просмотр фактур: тап по образцу открывает zoom-окно ---
+(() => {
+  const surfaces = Array.from(document.querySelectorAll(
+    '.svc-hero .visual .surface,.sample-card .surface,.mat .swatch .surface.photo,.work .surface.photo'
+  )).filter(el => !el.closest('.cross a'));
+  if (!surfaces.length) return;
+
+  const getBgUrl = el => {
+    const bg = getComputedStyle(el).backgroundImage || '';
+    const m = bg.match(/url\(["']?(.+?)["']?\)/);
+    return m ? m[1] : '';
+  };
+
+  const getTitle = el => {
+    const sample = el.closest('.sample-card')?.querySelector('.sample-title')?.textContent;
+    const mat = el.closest('.mat')?.querySelector('h3')?.textContent;
+    const work = el.closest('.work')?.querySelector('.t')?.textContent;
+    const badge = el.closest('.visual')?.querySelector('.badge')?.textContent;
+    return (sample || mat || work || badge || 'Фактура').trim();
+  };
+
+  const viewer = document.createElement('div');
+  viewer.className = 'zoom-viewer';
+  viewer.setAttribute('role', 'dialog');
+  viewer.setAttribute('aria-modal', 'true');
+  viewer.innerHTML =
+    '<button class="zoom-viewer__close" type="button" aria-label="Закрыть">×</button>' +
+    '<div class="zoom-viewer__stage"><img class="zoom-viewer__img" alt=""></div>' +
+    '<div class="zoom-viewer__title"></div>';
+  document.body.append(viewer);
+
+  const stage = viewer.querySelector('.zoom-viewer__stage');
+  const img = viewer.querySelector('.zoom-viewer__img');
+  const title = viewer.querySelector('.zoom-viewer__title');
+  const closeBtn = viewer.querySelector('.zoom-viewer__close');
+
+  let scale = 1, x = 0, y = 0;
+  let startScale = 1, startX = 0, startY = 0, startDist = 0;
+  let scrollYBeforeOpen = 0;
+  const points = new Map();
+
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+  const dist = () => {
+    const p = Array.from(points.values());
+    if (p.length < 2) return 0;
+    return Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+  };
+  const render = () => {
+    if (scale <= 1.01) { x = 0; y = 0; scale = 1; }
+    img.style.transform = 'translate3d(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px,0) scale(' + scale.toFixed(3) + ')';
+  };
+  const reset = () => { scale = 1; x = 0; y = 0; render(); };
+
+  const open = (src, label) => {
+    scrollYBeforeOpen = window.scrollY;
+    img.src = src;
+    img.alt = label;
+    title.textContent = label;
+    reset();
+    viewer.classList.add('open');
+    document.body.classList.add('zoom-viewer-open');
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + scrollYBeforeOpen + 'px';
+    document.body.style.width = '100%';
+    closeBtn.focus({ preventScroll: true });
+  };
+
+  const close = () => {
+    viewer.classList.remove('open');
+    document.body.classList.remove('zoom-viewer-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, scrollYBeforeOpen);
+    points.clear();
+    img.src = '';
+  };
+
+  surfaces.forEach(el => {
+    const src = getBgUrl(el);
+    if (!src) return;
+    el.dataset.zoomSrc = src;
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('aria-label', 'Открыть фактуру крупно');
+    el.addEventListener('click', e => {
+      if (e.target.closest('a')) return;
+      e.preventDefault();
+      open(src, getTitle(el));
+    });
+    el.addEventListener('keydown', e => {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      e.preventDefault();
+      open(src, getTitle(el));
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  viewer.addEventListener('click', e => { if (e.target === viewer) close(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && viewer.classList.contains('open')) close();
+  });
+
+  stage.addEventListener('pointerdown', e => {
+    if (!viewer.classList.contains('open')) return;
+    stage.setPointerCapture(e.pointerId);
+    points.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    startX = x; startY = y; startScale = scale; startDist = dist();
+  });
+  stage.addEventListener('pointermove', e => {
+    if (!points.has(e.pointerId)) return;
+    const prev = points.get(e.pointerId);
+    points.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (points.size >= 2) {
+      const d = dist();
+      if (startDist > 0) scale = clamp(startScale * (d / startDist), 1, 4);
+    } else if (scale > 1) {
+      x += e.clientX - prev.x;
+      y += e.clientY - prev.y;
+    }
+    render();
+  });
+  ['pointerup', 'pointercancel', 'pointerleave'].forEach(type => {
+    stage.addEventListener(type, e => {
+      points.delete(e.pointerId);
+      startScale = scale; startX = x; startY = y; startDist = dist();
+    });
+  });
+  stage.addEventListener('dblclick', reset);
+})();
