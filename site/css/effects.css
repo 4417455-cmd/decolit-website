@@ -142,3 +142,14 @@ body.fx-cursor-on,body.fx-cursor-on a,body.fx-cursor-on button,body.fx-cursor-on
   .fx-grain{opacity:.04}
   .fx-vignette{background:radial-gradient(130% 130% at 50% 45%,transparent 64%,rgba(18,15,11,.14) 100%)}
 }
+
+@media (hover:none), (pointer:coarse){
+  .fx-bg,
+  .fx-vignette,
+  .fx-spot,
+  .fx-grain,
+  .fx-progress,
+  .fx-cursor{
+    display:none !important;
+  }
+}

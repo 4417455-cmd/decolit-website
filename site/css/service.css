@@ -103,6 +103,12 @@
   .ptable th,.ptable td{padding:14px 12px}
   .ptable{font-size:14px}
 }
+
+@media (hover:none), (pointer:coarse){
+  .cross a:hover .surface{
+    transform:none;
+  }
+}
 .ptable-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
 
 /* ==========================================================================

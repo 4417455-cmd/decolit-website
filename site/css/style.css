@@ -449,3 +449,14 @@ input[type=range]:focus-visible::-webkit-slider-thumb{box-shadow:0 0 0 1px var(-
   .reveal{opacity:1;transform:none}
   html{scroll-behavior:auto}
 }
+
+@media (hover:none), (pointer:coarse){
+  .work:hover .surface,
+  .work:hover .cap,
+  .sample-card:hover .surface,
+  .mat:hover,
+  .mat:hover .swatch .surface,
+  .mat:hover .more span{
+    transform:none;
+  }
+}
