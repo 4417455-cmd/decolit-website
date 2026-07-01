@@ -115,7 +115,12 @@ header{
 }
 header.scrolled{background:rgba(242,238,231,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:14px 0;box-shadow:0 1px 0 var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:32px}
+header .logo{display:inline-flex;align-items:center;gap:10px}
 .logo{font-family:var(--serif);font-size:21px;letter-spacing:.18em;font-weight:400}
+header .logo::before{
+  content:"";display:block;width:30px;height:30px;flex:0 0 30px;
+  background:url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23B9963E' d='M25 4h7v28H4v-7h21V4Z'/%3E%3Cpath fill='%23C8AA5F' d='M15 4h7v18H4v-7h11V4Z'/%3E%3Cpath fill='%23DECFA6' d='M4 4h7v11H4V4Z'/%3E%3C/svg%3E") center/contain no-repeat;
+}
 .logo b{color:var(--accent);font-weight:400}
 .hero-page header:not(.scrolled){color:#fff}
 .hero-page header:not(.scrolled) .logo b{color:var(--sand)}
