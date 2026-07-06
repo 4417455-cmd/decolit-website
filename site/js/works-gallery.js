@@ -26,6 +26,7 @@
       const n = pad(i);
       const card = document.createElement('article');
       card.className = `work ${layoutClass(i)}`;
+      card.dataset.zoomTitle = `Работа ${n}`;
       card.innerHTML = `
         <div class="surface photo grain" style="background-image:url('assets/img/works/work-${n}.${ext(i)}')"></div>
       `;
@@ -33,6 +34,7 @@
     }
 
     gallery.replaceChildren(fragment);
+    gallery.dispatchEvent(new CustomEvent('works-gallery:rendered', { bubbles: true }));
     toggle.textContent = expanded ? 'Скрыть работы' : 'Смотреть все работы';
     toggle.setAttribute('aria-expanded', String(expanded));
   };

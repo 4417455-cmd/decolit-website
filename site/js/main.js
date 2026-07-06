@@ -227,15 +227,13 @@ if (leadForm) {
   });
 }
 
-// --- просмотр фактур: тап по образцу открывает zoom-окно ---
+// --- просмотр фактур: тап по фото открывает галерею со свайпом ---
 (() => {
-  const surfaces = Array.from(document.querySelectorAll(
-    '.svc-hero .visual .surface,.sample-card .surface,.mat .swatch .surface.photo,.work .surface.photo'
-  )).filter(el => !el.closest('.cross a'));
-  if (!surfaces.length) return;
+  const selector = '.svc-hero .visual .surface,.sample-card .surface,.mat .swatch .surface.photo,.work';
 
   const getBgUrl = el => {
-    const bg = getComputedStyle(el).backgroundImage || '';
+    const target = el.classList.contains('work') ? el.querySelector('.surface.photo') : el;
+    const bg = target ? getComputedStyle(target).backgroundImage || '' : '';
     const m = bg.match(/url\(["']?(.+?)["']?\)/);
     return m ? m[1] : '';
   };
@@ -243,7 +241,7 @@ if (leadForm) {
   const getTitle = el => {
     const sample = el.closest('.sample-card')?.querySelector('.sample-title')?.textContent;
     const mat = el.closest('.mat')?.querySelector('h3')?.textContent;
-    const work = el.closest('.work')?.querySelector('.t')?.textContent;
+    const work = el.closest('.work')?.dataset.zoomTitle || el.closest('.work')?.querySelector('.t')?.textContent;
     const badge = el.closest('.visual')?.querySelector('.badge')?.textContent;
     return (sample || mat || work || badge || 'Фактура').trim();
   };
@@ -254,7 +252,9 @@ if (leadForm) {
   viewer.setAttribute('aria-modal', 'true');
   viewer.innerHTML =
     '<button class="zoom-viewer__close" type="button" aria-label="Закрыть">×</button>' +
+    '<button class="zoom-viewer__nav zoom-viewer__nav--prev" type="button" aria-label="Предыдущее фото">‹</button>' +
     '<div class="zoom-viewer__stage"><img class="zoom-viewer__img" alt=""></div>' +
+    '<button class="zoom-viewer__nav zoom-viewer__nav--next" type="button" aria-label="Следующее фото">›</button>' +
     '<div class="zoom-viewer__title"></div>';
   document.body.append(viewer);
 
@@ -262,10 +262,16 @@ if (leadForm) {
   const img = viewer.querySelector('.zoom-viewer__img');
   const title = viewer.querySelector('.zoom-viewer__title');
   const closeBtn = viewer.querySelector('.zoom-viewer__close');
+  const prevBtn = viewer.querySelector('.zoom-viewer__nav--prev');
+  const nextBtn = viewer.querySelector('.zoom-viewer__nav--next');
 
   let scale = 1, x = 0, y = 0;
   let startScale = 1, startX = 0, startY = 0, startDist = 0;
   let scrollYBeforeOpen = 0;
+  let items = [];
+  let currentIndex = 0;
+  let swipeStartX = 0, swipeStartY = 0, swipeMoved = false;
+  let allItems = [];
   const points = new Map();
 
   const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
@@ -280,12 +286,19 @@ if (leadForm) {
   };
   const reset = () => { scale = 1; x = 0; y = 0; render(); };
 
-  const open = (src, label) => {
-    scrollYBeforeOpen = window.scrollY;
-    img.src = src;
-    img.alt = label;
-    title.textContent = label;
+  const show = index => {
+    if (!items.length) return;
+    currentIndex = (index + items.length) % items.length;
+    const item = items[currentIndex];
+    img.src = item.src;
+    img.alt = item.label;
+    title.textContent = item.label + ' · ' + (currentIndex + 1) + ' / ' + items.length;
     reset();
+  };
+
+  const open = index => {
+    scrollYBeforeOpen = window.scrollY;
+    show(index);
     viewer.classList.add('open');
     document.body.classList.add('zoom-viewer-open');
     document.body.style.position = 'fixed';
@@ -305,29 +318,57 @@ if (leadForm) {
     img.src = '';
   };
 
-  surfaces.forEach(el => {
-    const src = getBgUrl(el);
-    if (!src) return;
-    el.dataset.zoomSrc = src;
-    el.setAttribute('role', 'button');
-    el.setAttribute('tabindex', '0');
-    el.setAttribute('aria-label', 'Открыть фактуру крупно');
-    el.addEventListener('click', e => {
-      if (e.target.closest('a')) return;
-      e.preventDefault();
-      open(src, getTitle(el));
+  const go = dir => show(currentIndex + dir);
+
+  const buildItems = nodes => nodes
+    .map(el => ({ el, src: getBgUrl(el), label: getTitle(el) }))
+    .filter(item => item.src);
+
+  const openFrom = (el, fallbackIndex) => {
+    const isWork = el.classList.contains('work');
+    const scopedNodes = isWork
+      ? Array.from(document.querySelectorAll('[data-works-gallery] .work'))
+      : Array.from(document.querySelectorAll(selector)).filter(node => !node.classList.contains('work'));
+    items = buildItems(scopedNodes.filter(node => !node.closest('.cross a')));
+    const freshIndex = items.findIndex(fresh => fresh.el === el);
+    open(freshIndex >= 0 ? freshIndex : fallbackIndex);
+  };
+
+  const bindSurfaces = () => {
+    const nodes = Array.from(document.querySelectorAll(selector)).filter(el => !el.closest('.cross a'));
+    allItems = buildItems(nodes);
+
+    allItems.forEach((item, index) => {
+      const el = item.el;
+      const interactive = el.classList.contains('work') ? el : item.el;
+      interactive.dataset.zoomSrc = item.src;
+      interactive.setAttribute('role', 'button');
+      interactive.setAttribute('tabindex', '0');
+      interactive.setAttribute('aria-label', 'Открыть фото крупно');
+      if (el.dataset.zoomBound === 'true') return;
+      el.dataset.zoomBound = 'true';
+      el.addEventListener('click', e => {
+        if (e.target.closest('a')) return;
+        e.preventDefault();
+        openFrom(el, index);
+      });
+      el.addEventListener('keydown', e => {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        e.preventDefault();
+        openFrom(el, index);
+      });
     });
-    el.addEventListener('keydown', e => {
-      if (e.key !== 'Enter' && e.key !== ' ') return;
-      e.preventDefault();
-      open(src, getTitle(el));
-    });
-  });
+  };
 
   closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', () => go(-1));
+  nextBtn.addEventListener('click', () => go(1));
   viewer.addEventListener('click', e => { if (e.target === viewer) close(); });
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && viewer.classList.contains('open')) close();
+    if (!viewer.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') go(-1);
+    if (e.key === 'ArrowRight') go(1);
   });
 
   stage.addEventListener('pointerdown', e => {
@@ -335,6 +376,7 @@ if (leadForm) {
     stage.setPointerCapture(e.pointerId);
     points.set(e.pointerId, { x: e.clientX, y: e.clientY });
     startX = x; startY = y; startScale = scale; startDist = dist();
+    swipeStartX = e.clientX; swipeStartY = e.clientY; swipeMoved = false;
   });
   stage.addEventListener('pointermove', e => {
     if (!points.has(e.pointerId)) return;
@@ -346,14 +388,24 @@ if (leadForm) {
     } else if (scale > 1) {
       x += e.clientX - prev.x;
       y += e.clientY - prev.y;
+    } else {
+      const dx = e.clientX - swipeStartX;
+      const dy = e.clientY - swipeStartY;
+      swipeMoved = Math.abs(dx) > 24 && Math.abs(dx) > Math.abs(dy) * 1.4;
     }
     render();
   });
   ['pointerup', 'pointercancel', 'pointerleave'].forEach(type => {
     stage.addEventListener(type, e => {
+      if (type === 'pointerup' && points.size === 1 && scale <= 1.01 && swipeMoved) {
+        const dx = e.clientX - swipeStartX;
+        if (Math.abs(dx) > 56) go(dx < 0 ? 1 : -1);
+      }
       points.delete(e.pointerId);
       startScale = scale; startX = x; startY = y; startDist = dist();
     });
   });
   stage.addEventListener('dblclick', reset);
+  document.addEventListener('works-gallery:rendered', bindSurfaces);
+  bindSurfaces();
 })();
