@@ -59,7 +59,7 @@ if (opts && area) {
     const low = Math.round(total * 0.92 / 1000) * 1000;   // вилка ±8%
     const high = Math.round(total * 1.08 / 1000) * 1000;
     animateResult(low, high);
-    resultNote.textContent = 'материал ' + fmt(material) + ' ₽/м² · нанесение ' + fmt(work) + ' ₽/м²';
+    resultNote.textContent = 'нанесение ' + fmt(work) + ' ₽/м²';
   };
 
   opts.querySelectorAll('.opt').forEach(b => b.onclick = () => {

@@ -50,12 +50,12 @@ img{max-width:100%;display:block}
   content:"";position:absolute;inset:0;z-index:-1;
   background-size:cover;background-position:center;
 }
-.tex-microcement::before{background-image:url("../assets/img/photo/microcement.jpg")}
-.tex-venetian::before{background-image:url("../assets/img/photo/venetian.jpg")}
-.tex-concrete::before{background-image:url("../assets/img/photo/concrete.jpg")}
-.tex-silk::before{background-image:url("../assets/img/materials/silk-plaster.jpg");background-position:center}
-.tex-suede::before{background-image:url("../assets/img/materials/ancoral.jpg");background-position:center 38%}
-.tex-texture::before{background-image:url("../assets/img/photo/travertine.jpg")}
+.tex-microcement::before{background-image:url("../assets/img/materials/tilda-microcement.png")}
+.tex-venetian::before{background-image:url("../assets/img/materials/tilda-venecianka.png")}
+.tex-concrete::before{background-image:url("../assets/img/materials/tilda-concrete.png")}
+.tex-silk::before{background-image:url("../assets/img/materials/tilda-silk.png");background-position:center}
+.tex-suede::before{background-image:url("../assets/img/materials/tilda-ancoral.png");background-position:center 38%}
+.tex-texture::before{background-image:url("../assets/img/materials/tilda-fakturnaya.png")}
 .tex-hero::before{background-image:url("../assets/img/photo/hero-v2-green-leaves-bright.png");background-position:center}
 /* единый тёплый колор-грейдинг для фактур-фото — убираем синеву, держим премиум-тон */
 .tex::before{filter:sepia(.14) saturate(.86) brightness(.97) contrast(1.02)}
@@ -120,15 +120,13 @@ header .logo{display:inline-block;letter-spacing:.12em;white-space:nowrap}
 .logo{font-family:var(--serif);font-size:27px;letter-spacing:.18em;font-weight:400}
 header .logo::before{
   content:"";display:inline-block;width:52px;height:52px;margin-right:20px;vertical-align:-.44em;
-  background-color:var(--accent);
-  -webkit-mask:url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='6' y='6' width='9' height='17' fill='black'/%3E%3Crect x='20' y='6' width='9' height='30' fill='black'/%3E%3Crect x='6' y='27' width='23' height='9' fill='black'/%3E%3Crect x='34' y='6' width='9' height='40' fill='black'/%3E%3Crect x='6' y='41' width='37' height='9' fill='black'/%3E%3C/svg%3E") center/contain no-repeat;
-  mask:url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='6' y='6' width='9' height='17' fill='black'/%3E%3Crect x='20' y='6' width='9' height='30' fill='black'/%3E%3Crect x='6' y='27' width='23' height='9' fill='black'/%3E%3Crect x='34' y='6' width='9' height='40' fill='black'/%3E%3Crect x='6' y='41' width='37' height='9' fill='black'/%3E%3C/svg%3E") center/contain no-repeat;
+  background:url("data:image/svg+xml,%3Csvg width='52' height='52' viewBox='0 0 52 52' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='6' y='6' width='9' height='17' fill='%23D9C79F'/%3E%3Crect x='20' y='6' width='9' height='30' fill='%23C3A356'/%3E%3Crect x='6' y='27' width='23' height='9' fill='%23C3A356'/%3E%3Crect x='34' y='6' width='9' height='40' fill='%23B68D28'/%3E%3Crect x='6' y='41' width='37' height='9' fill='%23B68D28'/%3E%3C/svg%3E") center/contain no-repeat;
 }
 .logo b{color:var(--accent);font-weight:400}
 .hero-page header:not(.scrolled){color:#fff}
 .hero-page header:not(.scrolled) .logo b{color:var(--sand)}
 .hero-page header:not(.scrolled) .logo{color:#fff;text-shadow:none}
-.hero-page header:not(.scrolled) .logo::before{background-color:var(--sand)}
+.hero-page header:not(.scrolled) .logo::before{background-color:transparent}
 .hero-page header:not(.scrolled) .nav-links a{color:rgba(255,255,255,.85)}
 .hero-page header:not(.scrolled) .nav-links a:hover{color:#fff}
 .hero-page header:not(.scrolled) .phone{color:#fff}
@@ -210,6 +208,9 @@ header .logo::before{
 .sample-card{background:var(--paper);border:1px solid var(--line);overflow:hidden}
 .sample-card .surface{height:360px;background-size:cover;background-position:center;transition:transform .9s cubic-bezier(.2,.6,.2,1)}
 .sample-card:hover .surface{transform:scale(1.04)}
+.sample-card .venecianka-sample::after{content:none}
+.sample-card .venezia-nova-sample::after{content:none}
+.sample-card .shelk-sample::after{content:none}
 .sample-card .sample-cap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 20px;border-top:1px solid var(--line)}
 .sample-card .sample-title{font-family:var(--serif);font-size:20px;line-height:1.2;color:var(--ink)}
 .sample-card .sample-note{font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--taupe);white-space:nowrap}
@@ -217,6 +218,65 @@ header .logo::before{
 .sample-grid-microcement .sample-note{margin-top:12px;line-height:1.45;white-space:normal}
 .sample-grid-microcement .sample-price{font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ink)}
 .sample-grid-microcement .sample-price span{display:block;font-size:15px;color:var(--graphite)}
+.sample-card .marmoris-sample{
+  background-size:cover;
+  background-position:center;
+  filter:sepia(.05) saturate(.96) brightness(1.02) contrast(1.02);
+}
+.sample-card .marmoris-sample::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(80% 120% at 22% 10%,rgba(255,255,255,.22),transparent 56%),
+    radial-gradient(60% 80% at 74% 82%,rgba(0,0,0,.10),transparent 62%),
+    repeating-linear-gradient(102deg,rgba(255,255,255,.07) 0 1px,transparent 1px 5px);
+  mix-blend-mode:soft-light;
+}
+.sample-card .marmoris-sample::after{
+  opacity:.18;
+  mix-blend-mode:multiply;
+}
+.marmoris-01{background-image:url("../assets/img/samples/marmoris/marmoris-01.jpg")}
+.marmoris-02{background-image:url("../assets/img/samples/marmoris/marmoris-02.jpg")}
+.marmoris-03{background-image:url("../assets/img/samples/marmoris/marmoris-03.jpg")}
+.marmoris-04{background-image:url("../assets/img/samples/marmoris/marmoris-04.jpg")}
+.marmoris-05{background-image:url("../assets/img/samples/marmoris/marmoris-05.jpg")}
+.marmoris-06{background-image:url("../assets/img/samples/marmoris/marmoris-06.jpg")}
+.marmoris-07{background-image:url("../assets/img/samples/marmoris/marmoris-07.jpg")}
+.marmoris-08{background-image:url("../assets/img/samples/marmoris/marmoris-08.jpg")}
+.marmoris-09{background-image:url("../assets/img/samples/marmoris/marmoris-09.jpg")}
+.marmoris-10{background-image:url("../assets/img/samples/marmoris/marmoris-10.jpg")}
+.marmoris-11{background-image:url("../assets/img/samples/marmoris/marmoris-11.jpg")}
+.marmoris-12{background-image:url("../assets/img/samples/marmoris/marmoris-12.jpg")}
+.marmoris-13{background-image:url("../assets/img/samples/marmoris/marmoris-13.jpg")}
+.marmoris-14{background-image:url("../assets/img/samples/marmoris/marmoris-14.jpg")}
+.marmoris-15{background-image:url("../assets/img/samples/marmoris/marmoris-15.jpg")}
+.sample-card .marmoris-sample::before,
+.sample-card .marmoris-sample::after{content:none}
+.sample-card .sample-price-block{
+  display:grid;
+  gap:4px;
+  margin-top:20px;
+  font-size:17px;
+  font-weight:400;
+  letter-spacing:0;
+  text-transform:none;
+  color:var(--ink);
+}
+.sample-card .sample-price-block span{
+  display:flex;
+  align-items:baseline;
+  color:var(--ink);
+}
+.sample-card .sample-price-block i{
+  display:block;
+  flex:1 1 auto;
+  min-width:56px;
+  margin:0 3px;
+  border-bottom:2px dotted rgba(25,22,19,.72);
+  transform:translateY(-.16em);
+}
 
 /* ---------- материалы (экспонаты) ---------- */
 .materials{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}

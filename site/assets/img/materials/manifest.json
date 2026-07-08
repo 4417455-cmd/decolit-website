@@ -1,32 +1,68 @@
 {
   "silk-plaster": {
     "material": "Шелк / Marmoris",
-    "source_page": "https://decolitpro.ru/matovi",
-    "image": "https://static.tildacdn.com/tild6464-3663-4766-b337-306665613030/FullSizeRender_75.jpg"
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild3365-3661-4531-b637-383932326130/__2026-01-23__214536.png",
+    "local_file": "tilda-marmoris.png"
   },
   "ancoral": {
     "material": "Замша / велюр / Ancoral",
-    "source_page": "https://decolitpro.ru/ancoral",
-    "image": "https://static.tildacdn.com/tild3739-6430-4436-b732-653133356535/FullSizeRender_66.jpg"
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild3362-3932-4136-b939-383763353234/__2026-01-21__221642.png",
+    "local_file": "tilda-ancoral.png"
   },
   "fakturnaya": {
     "material": "Фактурная штукатурка",
-    "source_page": "https://decolitpro.ru/faktura_",
-    "image": "https://static.tildacdn.com/tild6333-6364-4138-b963-393138323036/1.jpg"
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild6532-6631-4332-a265-396134343063/__2026-05-30__131011.png",
+    "local_file": "tilda-fakturnaya.png"
   },
   "nubuk": {
     "material": "Нубук",
-    "source_page": "https://decolitpro.ru/nubuk",
-    "image": "https://static.tildacdn.com/tild3137-3530-4164-b631-386338653731/IMG_6651.jpg"
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild6632-6232-4130-b762-313335643630/__2026-02-05__224606.png",
+    "local_file": "tilda-nubuk.png"
   },
   "karta-mira": {
     "material": "Карта мира",
-    "source_page": "https://decolitpro.ru/karta-mira",
-    "image": "https://static.tildacdn.com/tild3731-3733-4265-b166-326134643461/FullSizeRender_42.jpg"
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild3635-3231-4263-a631-613834346664/__2026-02-13__231320.png",
+    "local_file": "tilda-karta-mira.png"
   },
   "nuvole-quartz": {
     "material": "Nuvole Quartz",
-    "source_page": "https://decolitpro.ru/nuvole-metalkor",
-    "image": "https://static.tildacdn.com/tild3439-3763-4264-b565-323066386639/FullSizeRender_6.jpg"
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild6264-6265-4565-b932-663536323231/__2026-05-30__132410.png",
+    "local_file": "tilda-nuvole-quartz.png"
+  },
+  "microcement": {
+    "material": "Микроцемент",
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild6665-3862-4336-b733-336661636162/__2025-12-02__210500.png",
+    "local_file": "tilda-microcement.png"
+  },
+  "concrete": {
+    "material": "Декоративная штукатурка под бетон",
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild3039-3063-4662-b966-323366623966/__2026-05-30__130514.png",
+    "local_file": "tilda-concrete.png"
+  },
+  "venecianka": {
+    "material": "Венецианская штукатурка",
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild3639-3635-4630-a263-646436666464/__2026-05-30__130812.png",
+    "local_file": "tilda-venecianka.png"
+  },
+  "silk": {
+    "material": "Шелк Nuvole",
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild6333-6330-4231-a236-393664303133/__2026-02-09__125913.png",
+    "local_file": "tilda-silk.png"
+  },
+  "venezia-nova": {
+    "material": "Венеция Нова",
+    "source_page": "https://project2648471.tilda.ws/page12306007.html",
+    "image": "https://static.tildacdn.com/tild3834-6566-4134-b039-383766633733/__2026-06-03__174304.png",
+    "local_file": "tilda-venezia-nova.png"
   }
 }
