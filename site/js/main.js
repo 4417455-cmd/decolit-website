@@ -227,9 +227,9 @@ if (leadForm) {
   });
 }
 
-// --- просмотр фактур: тап по фото открывает галерею со свайпом ---
+// --- просмотр работ: тап по фото открывает галерею со свайпом ---
 (() => {
-  const selector = '.svc-hero .visual .surface,.sample-card .surface,.mat .swatch .surface.photo,.work';
+  const selector = '[data-works-gallery] .work';
 
   const getBgUrl = el => {
     const target = el.classList.contains('work') ? el.querySelector('.surface.photo') : el;
@@ -239,11 +239,8 @@ if (leadForm) {
   };
 
   const getTitle = el => {
-    const sample = el.closest('.sample-card')?.querySelector('.sample-title')?.textContent;
-    const mat = el.closest('.mat')?.querySelector('h3')?.textContent;
     const work = el.closest('.work')?.dataset.zoomTitle || el.closest('.work')?.querySelector('.t')?.textContent;
-    const badge = el.closest('.visual')?.querySelector('.badge')?.textContent;
-    return (sample || mat || work || badge || 'Фактура').trim();
+    return (work || 'Работа').trim();
   };
 
   const viewer = document.createElement('div');
@@ -325,10 +322,7 @@ if (leadForm) {
     .filter(item => item.src);
 
   const openFrom = (el, fallbackIndex) => {
-    const isWork = el.classList.contains('work');
-    const scopedNodes = isWork
-      ? Array.from(document.querySelectorAll('[data-works-gallery] .work'))
-      : Array.from(document.querySelectorAll(selector)).filter(node => !node.classList.contains('work'));
+    const scopedNodes = Array.from(document.querySelectorAll(selector));
     items = buildItems(scopedNodes.filter(node => !node.closest('.cross a')));
     const freshIndex = items.findIndex(fresh => fresh.el === el);
     open(freshIndex >= 0 ? freshIndex : fallbackIndex);
@@ -340,7 +334,7 @@ if (leadForm) {
 
     allItems.forEach((item, index) => {
       const el = item.el;
-      const interactive = el.classList.contains('work') ? el : item.el;
+      const interactive = el;
       interactive.dataset.zoomSrc = item.src;
       interactive.setAttribute('role', 'button');
       interactive.setAttribute('tabindex', '0');
