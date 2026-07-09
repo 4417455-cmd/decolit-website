@@ -227,8 +227,38 @@ if (leadForm) {
   });
 }
 
+// --- запрет просмотра карточек: lightbox нужен только галерее работ ---
+(() => {
+  const blockedSelector = '.mat .swatch .surface,.sample-card .surface,.svc-hero .visual .surface';
+  const closeViewer = () => {
+    document.querySelectorAll('.zoom-viewer.open').forEach(viewer => viewer.classList.remove('open'));
+    document.body.classList.remove('zoom-viewer-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+  };
+
+  document.addEventListener('click', e => {
+    const blocked = e.target.closest(blockedSelector);
+    if (!blocked || blocked.closest('[data-works-gallery]')) return;
+    closeViewer();
+    e.stopImmediatePropagation();
+  }, true);
+
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    const blocked = e.target.closest(blockedSelector);
+    if (!blocked || blocked.closest('[data-works-gallery]')) return;
+    closeViewer();
+    e.stopImmediatePropagation();
+  }, true);
+})();
+
 // --- просмотр работ: тап по фото открывает галерею со свайпом ---
 (() => {
+  const gallery = document.querySelector('[data-works-gallery]');
+  if (!gallery) return;
+
   const selector = '[data-works-gallery] .work';
 
   const getBgUrl = el => {
