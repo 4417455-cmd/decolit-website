@@ -35,12 +35,12 @@
       {
         "name": "Декоцемент D 1-6",
         "material_from_rub_m2": 1850,
-        "work_from_rub_m2": 1800,
-        "material_and_work_from_rub_m2": 3650
+        "work_from_rub_m2": 2400,
+        "material_and_work_from_rub_m2": 4250
       }
     ],
-    "calculator_from_rub_m2": 3650,
-    "price_note": "На decolitpro.ru для Декоцемент D 1-6 указана единая цена: материал 1850 ₽/м², нанесение 1800 ₽/м²."
+    "calculator_from_rub_m2": 4250,
+    "price_note": "Для Декоцемент D 1-6 указана единая цена: материал 1850 ₽/м², нанесение 2400 ₽/м²."
   },
   {
     "id": "ancoral",
@@ -56,19 +56,19 @@
       {
         "name": "Ancoral 1-12",
         "material_from_rub_m2": 1150,
-        "work_from_rub_m2": 1450,
-        "material_and_work_from_rub_m2": 2600
+        "work_from_rub_m2": 1900,
+        "material_and_work_from_rub_m2": 3050
       }
     ],
-    "calculator_from_rub_m2": 2600,
-    "price_note": "На decolitpro.ru для Ancoral 1-12 указана единая цена: материал 1150 ₽/м², нанесение 1450 ₽/м².",
+    "calculator_from_rub_m2": 3050,
+    "price_note": "Для Ancoral 1-12 указана единая цена: материал 1150 ₽/м², нанесение 1900 ₽/м².",
     "site_notes": "В старом меню эта страница называется эффектом замши; в описании ниже страницы Ancoral также подается как рельефное минеральное покрытие."
   },
   {
     "id": "marmoris-ar",
     "name": "Матовый шелк Marmoris AR",
     "source_url": "https://decolitpro.ru/matovi",
-    "local_url": "pokrytiya/shelk.html",
+    "local_url": "pokrytiya/marmoris.html",
     "status": "confirmed",
     "source_status": "confirmed_from_decolitpro",
     "category": "matte_silk",
@@ -78,12 +78,12 @@
       {
         "name": "Marmoris 1-15",
         "material_from_rub_m2": 1250,
-        "work_from_rub_m2": 1450,
-        "material_and_work_from_rub_m2": 2700
+        "work_from_rub_m2": 1800,
+        "material_and_work_from_rub_m2": 3050
       }
     ],
-    "calculator_from_rub_m2": 2700,
-    "price_note": "На decolitpro.ru для Marmoris 1-15 указана единая цена: материал 1250 ₽/м², нанесение 1450 ₽/м²."
+    "calculator_from_rub_m2": 3050,
+    "price_note": "Для Marmoris 1-15 указана единая цена: материал 1250 ₽/м², нанесение 1800 ₽/м²."
   },
   {
     "id": "nuvole",
@@ -99,18 +99,18 @@
       {
         "name": "Nuvole 1, 3, 4, 7, 8, 10, 11",
         "material_from_rub_m2": 1250,
-        "work_from_rub_m2": 1400,
-        "material_and_work_from_rub_m2": 2650
+        "work_from_rub_m2": 1900,
+        "material_and_work_from_rub_m2": 3150
       },
       {
         "name": "Nuvole 2, 5, 6, 9, 12",
         "material_from_rub_m2": 1250,
-        "work_from_rub_m2": 1600,
-        "material_and_work_from_rub_m2": 2850
+        "work_from_rub_m2": 1900,
+        "material_and_work_from_rub_m2": 3150
       }
     ],
-    "calculator_from_rub_m2": 2650,
-    "price_note": "На decolitpro.ru материал для всех вариантов Nuvole указан 1250 ₽/м²; нанесение отличается: 1400 или 1600 ₽/м².",
+    "calculator_from_rub_m2": 3150,
+    "price_note": "Для всех вариантов Nuvole указана единая цена: материал 1250 ₽/м², нанесение 1900 ₽/м².",
     "site_notes": "На странице указаны свойства: влажная уборка, реставрация, водный разбавитель, негорючесть, экологичность, паропроницаемость, расход 0,15 л/м²."
   },
   {
@@ -127,12 +127,12 @@
       {
         "name": "Marmoris L 13-27",
         "material_from_rub_m2": 1890,
-        "work_from_rub_m2": 1700,
-        "material_and_work_from_rub_m2": 3590
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 4090
       }
     ],
-    "calculator_from_rub_m2": 3590,
-    "price_note": "На отдельной странице Карта мира для Marmoris L 13-27 указана единая цена: материал 1890 ₽/м², нанесение 1700 ₽/м²."
+    "calculator_from_rub_m2": 4090,
+    "price_note": "Для Marmoris L 13-27 указана единая цена: материал 1890 ₽/м², нанесение 2200 ₽/м²."
   },
   {
     "id": "fakturnaya",
@@ -148,20 +148,20 @@
       {
         "name": "Marmoris L 1, 3-5, 7-15, 17-25",
         "material_from_rub_m2": 1990,
-        "work_from_rub_m2": 1800,
-        "material_and_work_from_rub_m2": 3790
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 4190
       },
       {
         "name": "Marmoris L 2",
         "material_from_rub_m2": 2990,
-        "work_from_rub_m2": 5500,
-        "material_and_work_from_rub_m2": 8490
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 5190
       },
       {
         "name": "Marmoris L 6",
         "material_from_rub_m2": 1990,
-        "work_from_rub_m2": 2500,
-        "material_and_work_from_rub_m2": 4490
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 4190
       },
       {
         "name": "Marmoris L 16",
@@ -172,18 +172,18 @@
       {
         "name": "Marmoris L 26",
         "material_from_rub_m2": 2290,
-        "work_from_rub_m2": 1800,
-        "material_and_work_from_rub_m2": 4090
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 4490
       },
       {
         "name": "Marmoris L 27",
         "material_from_rub_m2": 2590,
-        "work_from_rub_m2": 2500,
-        "material_and_work_from_rub_m2": 5090
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 4790
       }
     ],
-    "calculator_from_rub_m2": 3790,
-    "price_note": "На decolitpro.ru у фактурной штукатурки разные цены по вариантам Marmoris L; для калькулятора берём минимальную подтвержденную цену."
+    "calculator_from_rub_m2": 4190,
+    "price_note": "Для фактурной штукатурки материал зависит от варианта Marmoris L; нанесение указано единое: 2200 ₽/м²."
   },
   {
     "id": "venetian",
@@ -199,24 +199,24 @@
       {
         "name": "Marmorella 4, 6, 7, 13-15",
         "material_from_rub_m2": 1990,
-        "work_from_rub_m2": 2000,
-        "material_and_work_from_rub_m2": 3990
+        "work_from_rub_m2": 2500,
+        "material_and_work_from_rub_m2": 4490
       },
       {
         "name": "Marmorella 3, 5, 8-12",
         "material_from_rub_m2": 1990,
-        "work_from_rub_m2": 2200,
-        "material_and_work_from_rub_m2": 4190
+        "work_from_rub_m2": 2500,
+        "material_and_work_from_rub_m2": 4490
       },
       {
         "name": "Marmorella 1-2",
         "material_from_rub_m2": 1990,
-        "work_from_rub_m2": 2700,
-        "material_and_work_from_rub_m2": 4690
+        "work_from_rub_m2": 2500,
+        "material_and_work_from_rub_m2": 4490
       }
     ],
-    "calculator_from_rub_m2": 3990,
-    "price_note": "На decolitpro.ru материал для Marmorella 1-15 указан 1990 ₽/м²; нанесение зависит от варианта: 2000, 2200 или 2700 ₽/м²."
+    "calculator_from_rub_m2": 4490,
+    "price_note": "Для Marmorella 1-15 указан материал 1990 ₽/м² и единое нанесение 2500 ₽/м²."
   },
   {
     "id": "nuvole-quartz",
@@ -232,25 +232,32 @@
       {
         "name": "Nuvole Quartz 1-15",
         "material_from_rub_m2": 1350,
-        "work_from_rub_m2": 1600,
-        "material_and_work_from_rub_m2": 2950
+        "work_from_rub_m2": 2200,
+        "material_and_work_from_rub_m2": 3550
       }
     ],
-    "calculator_from_rub_m2": 2950,
-    "price_note": "На decolitpro.ru для Nuvole Quartz 1-15 указана единая цена: материал 1350 ₽/м², нанесение 1600 ₽/м²."
+    "calculator_from_rub_m2": 3550,
+    "price_note": "Для Nuvole Quartz 1-15 указана единая цена: материал 1350 ₽/м², нанесение 2200 ₽/м²."
   },
   {
     "id": "nubuk",
     "name": "Нубук",
     "source_url": "https://decolitpro.ru/",
-    "local_url": "pokrytiya/zamsha.html",
-    "status": "needs_confirmation",
-    "source_status": "listed_on_decolitpro_menu_only",
+    "local_url": "pokrytiya/nubuk.html",
+    "status": "confirmed",
+    "source_status": "confirmed_from_client",
     "category": "suede_effect",
     "short_description": "Покрытие указано в меню материалов decolitpro.ru, но отдельную страницу с ценой при текущей проверке открыть не удалось.",
     "tags": ["Нубук", "Замша", "Велюр"],
-    "variants": [],
-    "calculator_from_rub_m2": null,
-    "price_note": "Нужно отдельно подтвердить URL и прайс по Нубуку."
+    "variants": [
+      {
+        "name": "Нубук 1-6",
+        "material_from_rub_m2": 1500,
+        "work_from_rub_m2": 2100,
+        "material_and_work_from_rub_m2": 3600
+      }
+    ],
+    "calculator_from_rub_m2": 3600,
+    "price_note": "Для Нубук 1-6 указана единая цена: материал 1500 ₽/м², нанесение 2100 ₽/м²."
   }
 ]
