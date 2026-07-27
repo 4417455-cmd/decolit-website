@@ -24,7 +24,7 @@
 <link rel="preload" href="assets/fonts/prata-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/golos-cyr.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/fonts.css">
-<link rel="stylesheet" href="css/style.css?v=no-card-lightbox-css-20260709">
+<link rel="stylesheet" href="css/style.css?v=lower-mobile-buttons-20260727">
 <link rel="stylesheet" href="css/effects.css">
 </head>
 <body class="hero-page">
@@ -64,17 +64,12 @@
 <section class="hero" id="hero">
   <div class="hero-bg tex tex-hero grain"></div>
   <div class="hero-inner">
-    <span class="eyebrow eyebrow-light reveal in">Студия декоративных поверхностей · Москва</span>
-    <h1 class="reveal in">Стены, которые хочется <em>трогать</em></h1>
-    <p class="hero-sub reveal in" data-d="1">Микроцемент, венецианка, бетон, шёлк и авторские фактуры. Продаём материалы и наносим своей бригадой. Сделаем образец на вашем объекте — увидите результат до начала работ.</p>
+    <span class="eyebrow eyebrow-light reveal in">Декоративные покрытия · Москва</span>
+    <h1 class="reveal in">Фактуры для <em>вашего интерьера</em></h1>
+    <p class="hero-sub reveal in" data-d="1">Подбираем и наносим декоративные покрытия. Покажем образец в вашем интерьере до начала работ.</p>
     <div class="hero-cta reveal in" data-d="2">
       <a href="#materials" class="btn btn-light">Смотреть покрытия</a>
-      <a href="#calc" class="btn btn-outline-light">Рассчитать стоимость</a>
-    </div>
-    <div class="hero-meta reveal in" data-d="3">
-      <div><div class="n" data-count="25">25</div><div class="l">лет с фактурой</div></div>
-      <div><div class="n" data-count="800" data-suffix="+">800+</div><div class="l">объектов сдано</div></div>
-      <div><div class="n" data-count="3">3</div><div class="l">года гарантии на работы</div></div>
+      <a href="#calc" class="hero-link">Рассчитать стоимость <span>→</span></a>
     </div>
   </div>
   <div class="scrollcue">листайте</div>
@@ -118,107 +113,85 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">02 — Покрытия</span>
-      <h2>Каждая фактура — <em>как экспонат</em></h2>
-      <p class="muted lead">Показываем цену материала и нанесения за м² отдельно, как в рабочем прайсе. Точную смету фиксируем в день замера.</p>
+      <h2>Покрытия для стен, пола <em>и акцентов</em></h2>
+      <p class="muted lead">Выберите фактуру, чтобы посмотреть образцы, свойства покрытия и варианты применения в интерьере.</p>
     </div>
     <div class="materials">
-      <article class="mat reveal">
+      <article class="mat mat--visual reveal">
         <div class="swatch"><div class="surface tex tex-microcement grain"></div></div>
         <div class="body">
-          <div class="top"><h3>Микроцемент</h3><div class="price">от 6 200 ₽</div></div>
-          <div class="price-detail">Нанесение от 3 500 ₽/м²</div>
-          <p class="desc">Бесшовное минеральное покрытие для стен, пола и санузлов. Влагостойкое, прочное, без стыков.</p>
+          <div class="top"><h3>Микроцемент</h3></div>
           <a href="pokrytiya/mikrocement.html" class="more">Подробнее <span>→</span></a>
         </div>
       </article>
-      <article class="mat reveal" data-d="1">
-        <div class="swatch"><div class="surface tex tex-venetian grain"></div></div>
-        <div class="body">
-          <div class="top"><h3>Венецианка</h3><div class="price">от 1 990 ₽</div></div>
-          <div class="price-detail">Нанесение от 2 500 ₽/м²</div>
-          <p class="desc">Полированная штукатурка с глубиной мрамора и мягким перламутровым блеском. Классика премиум-интерьера.</p>
-          <a href="pokrytiya/venecianka.html" class="more">Подробнее <span>→</span></a>
-        </div>
-      </article>
-      <article class="mat reveal" data-d="2">
-        <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-venezia-nova.png');background-position:center"></div></div>
-        <div class="body">
-          <div class="top"><h3>Венеция Нова</h3><div class="price">от 1 150 ₽</div></div>
-          <div class="price-detail">Нанесение от 1 900 ₽/м²</div>
-          <p class="desc">Мягкая венецианская фактура с сатиновым переливом и спокойной глубиной камня для жилых и коммерческих стен.</p>
-          <a href="pokrytiya/venezia-nova.html" class="more">Подробнее <span>→</span></a>
-        </div>
-      </article>
-      <article class="mat reveal">
+      <article class="mat mat--visual reveal">
         <div class="swatch"><div class="surface tex tex-concrete grain"></div></div>
         <div class="body">
-          <div class="top"><h3>Под бетон</h3><div class="price">от 1 850 ₽</div></div>
-          <div class="price-detail">Нанесение от 2 400 ₽/м²</div>
-          <p class="desc">Лофт-эстетика без холода настоящего бетона. Матовая поверхность с живыми разводами заливки.</p>
+          <div class="top"><h3>Под бетон</h3></div>
           <a href="pokrytiya/beton.html" class="more">Подробнее <span>→</span></a>
         </div>
       </article>
-      <article class="mat reveal">
+      <article class="mat mat--visual reveal">
         <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-marmoris.png');background-position:center"></div></div>
         <div class="body">
-          <div class="top"><h3>Матовый шёлк Marmoris</h3><div class="price">от 1 250 ₽</div></div>
-          <div class="price-detail">Нанесение от 1 800 ₽/м²</div>
-          <p class="desc">Матовое тонкослойное покрытие с эффектом ткани, дюн, старых стен, бетона и дерева.</p>
+          <div class="top"><h3>Декоративная штукатурка с матовым эффектом</h3></div>
           <a href="pokrytiya/marmoris.html" class="more">Подробнее <span>→</span></a>
         </div>
       </article>
-      <article class="mat reveal" data-d="1">
-        <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-silk.png');background-position:center"></div></div>
-        <div class="body">
-          <div class="top"><h3>Шёлк Nuvole</h3><div class="price">от 1 250 ₽</div></div>
-          <div class="price-detail">Нанесение от 1 900 ₽/м²</div>
-          <p class="desc">Тёплый атласный отлив, меняющийся при свете. Мягкое, уютное покрытие для спален и гостиных.</p>
-          <a href="pokrytiya/shelk.html" class="more">Подробнее <span>→</span></a>
-        </div>
-      </article>
-      <article class="mat reveal" data-d="1">
+      <article class="mat mat--visual reveal" data-d="1">
         <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-ancoral.png');background-position:center 38%"></div></div>
         <div class="body">
-          <div class="top"><h3>Замша / велюр</h3><div class="price">от 1 150 ₽</div></div>
-          <div class="price-detail">Нанесение от 1 900 ₽/м²</div>
-          <p class="desc">Глубокая матовая поверхность с эффектом мягкого ворса. Бархатная тактильность на стене.</p>
+          <div class="top"><h3>Замша / велюр</h3></div>
           <a href="pokrytiya/zamsha.html" class="more">Подробнее <span>→</span></a>
         </div>
       </article>
-      <article class="mat reveal" data-d="2">
-        <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-fakturnaya.png');background-position:center"></div></div>
-        <div class="body">
-          <div class="top"><h3>Фактурная</h3><div class="price">от 1 990 ₽</div></div>
-          <div class="price-detail">Нанесение от 2 200 ₽/м²</div>
-          <p class="desc">Рельефные авторские фактуры с выраженным зерном и игрой света. Характер для акцентных стен.</p>
-          <a href="pokrytiya/fakturnaya.html" class="more">Подробнее <span>→</span></a>
-        </div>
-      </article>
-      <article class="mat reveal">
+      <article class="mat mat--visual reveal">
         <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-nubuk.png');background-position:center"></div></div>
         <div class="body">
-          <div class="top"><h3>Нубук</h3><div class="price">от 1 500 ₽</div></div>
-          <div class="price-detail">Нанесение от 2 100 ₽/м²</div>
-          <p class="desc">Матовое покрытие с эффектом натурального нубука. Мягкая тактильная поверхность без бликов.</p>
+          <div class="top"><h3>Нубук</h3></div>
           <a href="pokrytiya/nubuk.html" class="more">Подробнее <span>→</span></a>
         </div>
       </article>
-      <article class="mat reveal" data-d="1">
+      <article class="mat mat--visual reveal" data-d="1">
+        <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-silk.png');background-position:center"></div></div>
+        <div class="body">
+          <div class="top"><h3>Шёлк Nuvole</h3></div>
+          <a href="pokrytiya/shelk.html" class="more">Подробнее <span>→</span></a>
+        </div>
+      </article>
+      <article class="mat mat--visual reveal" data-d="2">
+        <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-nuvole-quartz.png');background-position:center 43%"></div></div>
+        <div class="body">
+          <div class="top"><h3>Nuvole Quartz</h3></div>
+          <a href="pokrytiya/nuvole-quartz.html" class="more">Подробнее <span>→</span></a>
+        </div>
+      </article>
+      <article class="mat mat--visual reveal" data-d="2">
+        <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-venezia-nova.png');background-position:center"></div></div>
+        <div class="body">
+          <div class="top"><h3>Венеция Нова</h3></div>
+          <a href="pokrytiya/venezia-nova.html" class="more">Подробнее <span>→</span></a>
+        </div>
+      </article>
+      <article class="mat mat--visual reveal" data-d="2">
+        <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-fakturnaya.png');background-position:center"></div></div>
+        <div class="body">
+          <div class="top"><h3>Фактурная штукатурка</h3></div>
+          <a href="pokrytiya/fakturnaya.html" class="more">Подробнее <span>→</span></a>
+        </div>
+      </article>
+      <article class="mat mat--visual reveal" data-d="1">
         <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-karta-mira.png');background-position:center 42%"></div></div>
         <div class="body">
-          <div class="top"><h3>Карта мира</h3><div class="price">от 1 890 ₽</div></div>
-          <div class="price-detail">Нанесение от 2 200 ₽/м²</div>
-          <p class="desc">Рельефная фактура с абрисом материков. Авторский рисунок для выразительных акцентных стен.</p>
+          <div class="top"><h3>Карта мира</h3></div>
           <a href="pokrytiya/karta-mira.html" class="more">Подробнее <span>→</span></a>
         </div>
       </article>
-      <article class="mat reveal" data-d="2">
-        <div class="swatch"><div class="surface photo grain" style="background-image:url('assets/img/materials/tilda-nuvole-quartz.png');background-position:center 43%"></div></div>
+      <article class="mat mat--visual reveal" data-d="2">
+        <div class="swatch"><div class="surface tex tex-venetian grain"></div></div>
         <div class="body">
-          <div class="top"><h3>Nuvole Quartz</h3><div class="price">от 1 350 ₽</div></div>
-          <div class="price-detail">Нанесение от 2 200 ₽/м²</div>
-          <p class="desc">Кварцевая штукатурка с мягкими облачными переходами и сатиновым отливом. Износостойкая.</p>
-          <a href="pokrytiya/nuvole-quartz.html" class="more">Подробнее <span>→</span></a>
+          <div class="top"><h3>Венецианская штукатурка</h3></div>
+          <a href="pokrytiya/venecianka.html" class="more">Подробнее <span>→</span></a>
         </div>
       </article>
     </div>
@@ -251,7 +224,7 @@
         <div class="field">
           <label>Покрытие</label>
           <div class="opts" id="opts">
-            <button class="opt active" data-material="6200" data-work="3500">Микроцемент</button>
+            <button class="opt active" data-material="4000" data-work="3500">Микроцемент</button>
             <button class="opt" data-material="1990" data-work="2500">Венецианка</button>
             <button class="opt" data-material="1150" data-work="1900">Венеция Нова</button>
             <button class="opt" data-material="1850" data-work="2400">Под бетон</button>
@@ -275,8 +248,8 @@
       <div class="right">
         <div class="tex tex-venetian calc-tex"></div>
         <div class="result-label">Материал + нанесение</div>
-        <div class="result" id="result">446 000 – 524 000&nbsp;₽</div>
-        <div class="result-note" id="resultNote">нанесение 3 500 ₽/м²</div>
+        <div class="result" id="result">345 000 – 405 000&nbsp;₽</div>
+        <div class="result-note" id="resultNote">нанесение от 3 500 ₽/м²</div>
         <a href="#contact" class="btn btn-light">Заказать точный расчёт</a>
       </div>
     </div>
@@ -291,10 +264,10 @@
       <h2>Путь от заявки до <em>готовой стены</em></h2>
     </div>
     <div class="steps">
-      <div class="step reveal"><div class="no">01</div><h3>Заявка и замер</h3><p>Оставляете заявку — выезжаем на объект, замеряем и подбираем фактуру под интерьер.</p></div>
-      <div class="step reveal" data-d="1"><div class="no">02</div><h3>Смета и образец</h3><p>Фиксируем цену в договоре и делаем выкрас прямо у вас — на следующий день.</p></div>
-      <div class="step reveal" data-d="2"><div class="no">03</div><h3>Нанесение</h3><p>Своя бригада наносит покрытие. Укрываем мебель и полы, работаем без грязи.</p></div>
-      <div class="step reveal" data-d="3"><div class="no">04</div><h3>Приём работы</h3><p>Принимаете готовую стену. Гарантия 3 года — переделки за наш счёт.</p></div>
+      <div class="step reveal"><div class="no">01</div><h3>Заявка</h3><p>Вы оставляете заявку на расчёт стоимости материала и работы и встречаетесь с замерщиком.</p></div>
+      <div class="step reveal" data-d="1"><div class="no">02</div><h3>Расчёт стоимости</h3><p>В этот же день мы производим расчёт и высылаем вам договор на подпись.</p></div>
+      <div class="step reveal" data-d="2"><div class="no">03</div><h3>Образец</h3><p>На следующий день мы делаем образец по вашему пожеланию, цвету и фактуре.</p></div>
+      <div class="step reveal" data-d="3"><div class="no">04</div><h3>Приём работы</h3><p>Вы принимаете, утверждаете и оплачиваете каждый этап работ.</p></div>
     </div>
   </div>
 </section>
@@ -330,11 +303,10 @@
       <div class="seam"><span>◆</span></div>
     </div>
     <div class="faq">
-      <div class="q reveal"><button>Можно ли наносить микроцемент в ванной?<span class="ic"></span></button><div class="a"><p>Да. Микроцемент влагостойкий и бесшовный — его наносят на стены, пол и в душевых зонах. В системе слоёв есть гидроизоляция, поэтому покрытие не боится воды и пара.</p></div></div>
-      <div class="q reveal"><button>Сколько времени занимают работы?<span class="ic"></span></button><div class="a"><p>Зависит от площади и типа покрытия. Стена 15 м² — обычно 2–3 дня с учётом межслойной сушки. Точные сроки называем на замере.</p></div></div>
-      <div class="q reveal"><button>Делаете ли образец перед началом?<span class="ic"></span></button><div class="a"><p>Да, это наш стандарт. Привозим выкрасы и делаем образец прямо на вашем объекте — вы видите фактуру и цвет в своём свете до оплаты работ.</p></div></div>
-      <div class="q reveal"><button>Какая гарантия на покрытие?<span class="ic"></span></button><div class="a"><p>3 года по договору на все выполненные работы. Если в течение гарантийного срока возникнут дефекты по нашей вине — переделываем за свой счёт.</p></div></div>
-      <div class="q reveal"><button>Работаете только с материалом или под ключ?<span class="ic"></span></button><div class="a"><p>И так, и так. Можем продать сертифицированный материал с доставкой, а можем выполнить полный цикл под ключ своей бригадой — от подготовки стен до защитного слоя.</p></div></div>
+      <div class="q reveal"><button>Сколько стоит вызов замерщика?<span class="ic"></span></button><div class="a"><p>Все зависит от нахождения объекта</p></div></div>
+      <div class="q reveal"><button>Колеруете ли вы продукцию<span class="ic"></span></button><div class="a"><p>Да, у нас большая <a href="palitra.html">цветовая палитра</a>!</p></div></div>
+      <div class="q reveal"><button>У вашей компании есть сертификаты и реквизиты?<span class="ic"></span></button><div class="a"><p>Да</p></div></div>
+      <div class="q reveal"><button>Может ли заказчик купить только материал?<span class="ic"></span></button><div class="a"><p>Конечно. Об этом нужно будет сказать нашему менеджеру по телефону до начала составления договора</p></div></div>
     </div>
   </div>
 </section>
@@ -404,7 +376,7 @@
   </div>
 </footer>
 
-<script src="js/works-gallery.js?v=a07075c-fresh"></script>
+<script src="js/works-gallery.js?v=tilda-order-filled-20260721"></script>
 <script src="js/main.js?v=no-card-lightbox-20260709"></script>
 <script src="js/effects.js?v=a07075c-fresh"></script>
 <script type="application/ld+json">

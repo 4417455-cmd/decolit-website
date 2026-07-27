@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Цветовая палитра · Деколит</title>
+<meta name="description" content="Цветовая палитра для колеровки декоративных покрытий Деколит.">
+<link rel="preload" href="assets/fonts/golos-cyr.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css?v=palette-20260721">
+<link rel="stylesheet" href="css/effects.css">
+</head>
+<body>
+
+<header id="hdr" class="scrolled">
+  <div class="wrap nav">
+    <a href="index.html" class="logo">DECO<b>LIT</b></a>
+    <nav class="nav-links">
+      <a href="index.html#materials">Покрытия</a>
+      <a href="index.html#works">Работы</a>
+      <a href="index.html#calc">Расчёт</a>
+      <a href="index.html#designers">Дизайнерам</a>
+      <a href="o-studii.html">О нас</a>
+      <a href="index.html#faq">Вопросы</a>
+    </nav>
+    <div class="nav-right">
+      <span class="phone">+7 985 999-25-55</span>
+      <a href="index.html#contact" class="btn">Получить расчёт</a>
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mnav">
+  <button class="x" id="mx" aria-label="Закрыть">×</button>
+  <a href="index.html#materials">Покрытия</a>
+  <a href="index.html#works">Работы</a>
+  <a href="index.html#calc">Расчёт</a>
+  <a href="o-studii.html">О нас</a>
+  <a href="index.html#faq">Вопросы</a>
+</div>
+
+<div class="wrap crumbs">
+  <a href="index.html">Главная</a><span>/</span><b>Цветовая палитра</b>
+</div>
+
+<main>
+  <section class="palette-hero">
+    <div class="wrap">
+      <span class="eyebrow eyebrow-center">Колеровка покрытий</span>
+      <h1>Цветовая палитра</h1>
+      <p>Выберите подходящий оттенок и сообщите его код менеджеру. Перед окончательным выбором рекомендуем сделать выкрас на объекте.</p>
+    </div>
+  </section>
+
+  <div class="palette-note">Цвет на экране может отличаться от фактического из-за настроек монитора, освещения, фактуры и степени блеска покрытия.</div>
+  <section class="palette-stack" id="palette" aria-label="Палитра Tikkurila"></section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div><div class="logo">DECO<b>LIT</b></div><p>Студия декоративных поверхностей в Москве и области.</p></div>
+    <div><h4>Навигация</h4><a href="index.html#materials">Покрытия</a><a href="index.html#works">Работы</a><a href="index.html#faq">Вопросы</a></div>
+    <div><h4>Контакты</h4><a href="tel:+79859992555">+7 985 999-25-55</a><p>Москва, ул. Ленинская Слобода, 26</p></div>
+  </div>
+</footer>
+
+<script>
+  const palette = document.getElementById('palette');
+  const fragment = document.createDocumentFragment();
+  for (let i = 1; i <= 56; i += 1) {
+    const n = String(i).padStart(2, '0');
+    const img = document.createElement('img');
+    img.className = 'palette-sheet';
+    img.src = `assets/img/palette/tikkurila-${n}.png`;
+    img.alt = `Палитра Tikkurila — лист ${i}`;
+    img.loading = i > 2 ? 'lazy' : 'eager';
+    img.decoding = 'async';
+    fragment.appendChild(img);
+  }
+  palette.appendChild(fragment);
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @font-face {
+        font-family: "PrataLocal";
+        src: url("../fonts/prata-lat.woff2") format("woff2");
+      }
+      .word {
+        font-family: "PrataLocal", Georgia, "Times New Roman", serif;
+        font-size: 118px;
+        letter-spacing: 0.18em;
+        font-weight: 400;
+      }
+    </style>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FAF7F1"/>
+      <stop offset="0.52" stop-color="#F2EEE7"/>
+      <stop offset="1" stop-color="#EAE4D9"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="265" y1="260" x2="910" y2="795" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#E7CFA0"/>
+      <stop offset="0.35" stop-color="#C9AE83"/>
+      <stop offset="0.72" stop-color="#B68D28"/>
+      <stop offset="1" stop-color="#7E5234"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="36%" r="52%">
+      <stop offset="0" stop-color="#E7CFA0" stop-opacity="0.36"/>
+      <stop offset="0.58" stop-color="#C9AE83" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#191613" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <rect width="1200" height="1200" fill="url(#glow)"/>
+  <rect x="74" y="74" width="1052" height="1052" rx="0" fill="none" stroke="#C9AE83" stroke-opacity="0.45" stroke-width="3"/>
+
+  <g opacity="0.16">
+    <path d="M160 982H1040" stroke="#9C6B45" stroke-width="1"/>
+    <path d="M160 216H1040" stroke="#9C6B45" stroke-width="1"/>
+    <path d="M216 160V1040" stroke="#9C6B45" stroke-width="1"/>
+    <path d="M984 160V1040" stroke="#9C6B45" stroke-width="1"/>
+  </g>
+
+  <g transform="translate(390 230) scale(8.08)">
+    <rect x="6" y="6" width="9" height="17" fill="#D9C79F"/>
+    <rect x="20" y="6" width="9" height="30" fill="#C3A356"/>
+    <rect x="6" y="27" width="23" height="9" fill="#C3A356"/>
+    <rect x="34" y="6" width="9" height="40" fill="#B68D28"/>
+    <rect x="6" y="41" width="37" height="9" fill="#B68D28"/>
+  </g>
+
+  <text class="word" x="600" y="855" text-anchor="middle" aria-label="DECOLIT"><tspan fill="#191613">DECO</tspan><tspan fill="#9C6B45">LIT</tspan></text>
+
+  <path d="M372 912H828" stroke="#C9AE83" stroke-width="2" stroke-opacity="0.68"/>
+</svg>

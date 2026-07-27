@@ -18,7 +18,7 @@
 .svc-hero .sub{font-size:clamp(17px,2vw,20px);color:var(--graphite);max-width:520px;margin:24px 0 30px;line-height:1.55}
 .svc-price{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:30px}
 .svc-price .v{font-family:var(--serif);font-size:clamp(30px,4vw,40px);color:var(--ink);line-height:1.05}
-.svc-price .u{font-size:14px;color:var(--taupe);letter-spacing:.04em;line-height:1.45}
+.svc-price .u{font-size:14px;color:var(--accent-deep);font-weight:600;letter-spacing:.04em;line-height:1.45}
 .svc-hero .cta{display:flex;gap:14px;flex-wrap:wrap}
 .svc-hero .facts{display:flex;gap:34px;flex-wrap:wrap;margin-top:42px;padding-top:30px;border-top:1px solid var(--line)}
 .svc-hero .facts .n{font-family:var(--serif);font-size:26px;color:var(--accent)}
@@ -35,6 +35,7 @@
 
 /* ---------- "что это / где применяют" ---------- */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.section-head .microcement-about-title{font-size:clamp(34px,4vw,50px);text-wrap:normal}
 .about-grid .lead-txt p{color:var(--graphite);font-size:17px;margin-bottom:18px;max-width:540px}
 .apply{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .apply .a-item{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:22px}
@@ -46,6 +47,7 @@
 .adv{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;overflow:hidden}
 .adv .item{background:var(--bg);padding:34px 28px}
 .section-alt .adv .item{background:var(--bg-2)}
+.section-alt .adv.adv-microcement{background:var(--bg-2)}
 .adv .num{font-family:var(--serif);font-size:14px;color:var(--accent);margin-bottom:18px}
 .adv h3{font-size:20px;margin-bottom:10px}
 .adv p{font-size:14.5px;color:var(--graphite);line-height:1.55}
@@ -114,9 +116,14 @@
 /* ==========================================================================
    Фаза 5 — материальные детали страницы услуги (поверх style.css).
    ========================================================================== */
-/* металлический отлив бронзы на ключевых цифрах */
+/* Металлический отлив оставляем только на второстепенных номерах шагов.
+   Ключевые цены и факты должны иметь стабильный контраст на светлом фоне. */
+.svc-price .v,.svc-hero .facts .n{
+  color:var(--accent-deep);
+  text-shadow:0 8px 24px rgba(126,82,52,.12);
+}
 @supports ((-webkit-background-clip:text) or (background-clip:text)){
-  .svc-price .v,.svc-hero .facts .n,.flow .row .step-no{
+  .flow .row .step-no{
     background:var(--bronze-grad);background-size:140% 100%;
     -webkit-background-clip:text;background-clip:text;
     -webkit-text-fill-color:transparent;color:transparent;

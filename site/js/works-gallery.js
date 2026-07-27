@@ -3,12 +3,12 @@
   const toggle = document.querySelector('[data-works-toggle]');
   if (!gallery || !toggle) return;
 
-  const total = 131;
-  const initialCount = 8;
-  const pngFiles = new Set([3, 17, 23, 35, 36, 54, 71, 74, 77, 80, 84, 85, 90, 95, 98, 101, 106, 108, 109, 112, 117, 122, 131]);
+  const total = 109;
+  const initialCount = 10;
+  const pngFiles = new Set([1, 12, 15, 29, 30, 46, 57, 59, 61, 63, 66, 67, 71, 76, 79, 81, 85, 86, 87, 90, 95, 100, 109]);
   let expanded = false;
 
-  const pad = n => String(n).padStart(2, '0');
+  const pad = n => String(n).padStart(3, '0');
   const ext = n => pngFiles.has(n) ? 'png' : 'jpg';
   const layoutClass = n => {
     const mod = (n - 1) % 12;
@@ -28,7 +28,7 @@
       card.className = `work ${layoutClass(i)}`;
       card.dataset.zoomTitle = `Работа ${n}`;
       card.innerHTML = `
-        <div class="surface photo grain" style="background-image:url('assets/img/works/work-${n}.${ext(i)}')"></div>
+        <div class="surface photo grain" style="background-image:url('assets/img/works-tilda/work-${n}.${ext(i)}')"></div>
       `;
       fragment.appendChild(card);
     }

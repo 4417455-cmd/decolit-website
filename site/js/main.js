@@ -28,7 +28,7 @@ if (opts && area) {
   const areaN = document.getElementById('areaN');
   const result = document.getElementById('result');
   const resultNote = document.getElementById('resultNote');
-  let material = 6200;
+  let material = 4000;
   let work = 3500;
   const fmt = n => n.toLocaleString('ru-RU').replace(/,/g, ' ');
   const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -59,7 +59,7 @@ if (opts && area) {
     const low = Math.round(total * 0.92 / 1000) * 1000;   // вилка ±8%
     const high = Math.round(total * 1.08 / 1000) * 1000;
     animateResult(low, high);
-    resultNote.textContent = 'нанесение ' + fmt(work) + ' ₽/м²';
+    resultNote.textContent = 'нанесение от ' + fmt(work) + ' ₽/м²';
   };
 
   opts.querySelectorAll('.opt').forEach(b => b.onclick = () => {
@@ -432,4 +432,17 @@ if (leadForm) {
   stage.addEventListener('dblclick', reset);
   document.addEventListener('works-gallery:rendered', bindSurfaces);
   bindSurfaces();
+})();
+/* Единая структура страниц покрытий: образцы сразу после hero, затем описание. */
+(() => {
+  const samples = document.querySelector('.samples-warm');
+  const about = document.querySelector('.about-grid')?.closest('section');
+  if (!samples || !about) return;
+
+  if (samples.nextElementSibling !== about) about.before(samples);
+
+  const eyebrow = about.querySelector('.section-head .eyebrow');
+  const title = about.querySelector('.section-head h2');
+  if (eyebrow) eyebrow.textContent = 'О материале';
+  if (title) title.classList.add('microcement-about-title');
 })();
