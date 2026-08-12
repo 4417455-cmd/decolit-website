@@ -162,10 +162,7 @@ document.querySelectorAll('.q button').forEach(btn => {
   };
 });
 
-// --- форма заявки: отправка на email через FormSubmit.co ---
-// Бэкенда нет (статика на nginx), поэтому используем FormSubmit —
-// бесплатный сервис, шлёт данные формы на decolitpro@yandex.ru.
-// Первая отправка с нового адреса требует подтверждения по email (активация).
+// --- форма заявки: безопасная отправка в Telegram через сервер сайта ---
 const leadForm = document.querySelector('[data-lead-form]');
 if (leadForm) {
   const note = leadForm.parentElement.querySelector('.form-note');
@@ -203,23 +200,17 @@ if (leadForm) {
     setStatus('loading');
 
     try {
-      const formData = new FormData(leadForm);
-      formData.append('_subject', 'Новая заявка с сайта Деколит');
-      formData.append('_template', 'table');
-      formData.append('_captcha', 'false');
-      formData.append('page', location.pathname);
-
-      const resp = await fetch('https://formsubmit.co/ajax/decolitpro@yandex.ru', {
+      const resp = await fetch('https://decolit-leads-ksenial55555.waw0.amvera.tech/api/lead', {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name: name.trim(), phone: phone.trim(), page: location.pathname })
       });
 
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       const data = await resp.json().catch(() => ({}));
-      if (data && data.success === 'false') throw new Error('FormSubmit error');
+      if (!data.success) throw new Error('Delivery error');
 
-      setStatus('success', 'Спасибо! Заявка отправлена — перезвоним в течение нескольких минут.');
+      setStatus('success', 'Спасибо! Заявка отправлена — свяжемся с вами в рабочее время.');
       leadForm.reset();
     } catch (err) {
       setStatus('error', 'Не удалось отправить. Позвоните +7 985 999-25-55 или напишите в Telegram.');
