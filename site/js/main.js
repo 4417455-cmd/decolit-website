@@ -210,6 +210,7 @@ if (leadForm) {
       const data = await resp.json().catch(() => ({}));
       if (!data.success) throw new Error('Delivery error');
 
+      if (typeof ym === 'function') ym(111524040, 'reachGoal', 'lead_sent');
       setStatus('success', 'Спасибо! Заявка отправлена — свяжемся с вами в рабочее время.');
       leadForm.reset();
     } catch (err) {
@@ -217,6 +218,16 @@ if (leadForm) {
     }
   });
 }
+
+// --- цели Метрики: телефон и переходы в мессенджеры ---
+document.addEventListener('click', event => {
+  const link = event.target.closest('a[href]');
+  if (!link || typeof ym !== 'function') return;
+  const href = link.href || '';
+  if (href.startsWith('tel:')) ym(111524040, 'reachGoal', 'phone_click');
+  else if (href.includes('t.me/')) ym(111524040, 'reachGoal', 'telegram_click');
+  else if (href.includes('vk.com/')) ym(111524040, 'reachGoal', 'vk_click');
+});
 
 // --- запрет просмотра карточек: lightbox нужен только галерее работ ---
 (() => {
